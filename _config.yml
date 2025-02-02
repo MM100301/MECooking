@@ -2,5 +2,5 @@ theme: minima
 title: MECooking
 author: Matthew McKinney
 description: This will be a website where Emma and I can document our favorite recipes together.
-url: https://mm100301.github.io/
-baseurl: /MECooking/pages/about.md
+url: https://mm100301.github.io
+baseurl: /MECooking
