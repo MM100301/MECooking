@@ -1,6 +1,7 @@
 ---
 title: about
 permalink: /
+layout: default
 tags: Matthew Emma
 ---
 
