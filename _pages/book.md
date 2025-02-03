@@ -1,6 +1,6 @@
 ---
-title: about
-permalink: /about/
+title: book
+permalink: /book/
 layout: about
 tags: Matthew Emma
 ---
