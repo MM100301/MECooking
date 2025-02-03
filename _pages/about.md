@@ -1,7 +1,7 @@
 ---
 title: about
 permalink: /
-layout: post
+layout: page
 tags: Matthew Emma
 ---
 
