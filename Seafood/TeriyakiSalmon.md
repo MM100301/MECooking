@@ -5,7 +5,7 @@ tags: Seafood Salmon Couscous Sweet
 ---
 
 ![UsImage]({{ site.url }}{{ site.baseurl }}/assets/img/TeriyakiSalmon.jpeg)
-<div></div>
+<div>
 <h4>Ingredients</h4>
 <ul>
   <li>1 lb Salmon</li>
