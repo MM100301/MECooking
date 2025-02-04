@@ -9,15 +9,15 @@ collections:
   chicken:
     label: chicken
     output: true
-    permalink: ({{ site.baseurl }}/:collection/:title)
+    permalink: MECooking/:collection/:title
   beef:
     label: beef
     output: true
-    permalink: ({{ site.baseurl }}/:collection/:title)
+    permalink: MECooking/:collection/:title
   seafood:
     label: seafood
     output: true
-    permalink: ({{ site.baseurl }}/:collection/:title)
+    permalink: MECooking/:collection/:title
   posts:
     output: false
     
