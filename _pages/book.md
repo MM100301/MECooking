@@ -6,6 +6,7 @@ tags: Matthew Emma
 ---
 
 <h1>Recipes</h1>
+<p>{{ site.collections }} site collections</p>
 <div>
 {% for recipe in site.collections %}
   <h3 class="post-meta">
