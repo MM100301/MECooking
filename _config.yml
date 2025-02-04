@@ -9,11 +9,11 @@ collections:
   chicken:
     label: chicken
     output: true
-    permalink: /chicken/:title
+    permalink: MECooking/_chicken/:title
   beef:
     label: beef
     output: true
-    permalink: /_beef/:title
+    permalink: MECooking/_beef/:title
   seafood:
     label: seafood
     output: true
