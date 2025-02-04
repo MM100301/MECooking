@@ -23,7 +23,7 @@ collections:
     
 
 include:
-  "_pages"
-  "_chicken"
-  "_beef"
-  "_seafood"
+  - _pages
+  - _chicken
+  - _beef
+  - _seafood
