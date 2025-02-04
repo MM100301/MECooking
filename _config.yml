@@ -13,7 +13,7 @@ collections:
   beef:
     label: beef
     output: true
-    permalink: /book/:title
+    permalink: /:collection/:title
   seafood:
     label: seafood
     output: true
