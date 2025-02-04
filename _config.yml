@@ -18,6 +18,8 @@ collections:
     label: seafood
     output: true
     permalink: /book/:title
+  posts:
+    output: false
     
 
 include: ["_pages"]
