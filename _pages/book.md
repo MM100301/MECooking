@@ -8,7 +8,7 @@ tags: Matthew Emma
 {% for recipe in site.collections %}
   <li>
     <h3 class="post-meta">
-      Recipe {{ :title }}
+      Recipe {{ recipe.title }}
     </h3>
   </li>
 {% endfor %}
