@@ -27,3 +27,6 @@ include:
   - _chicken
   - _beef
   - _seafood
+
+
+enable_darkmode: true
