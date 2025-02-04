@@ -6,14 +6,13 @@ tags: Matthew Emma
 ---
 
 <h1>Recipes</h1>
-<p>{{ site.collections }} site collections</p>
 <div>
 {% for collection in site.collections %}
   <h3 class="post-meta">
     Items in {{ collection.label }}
   </h3>
   {% for recipe in site.[collection.label] %}
-    <li>{{ recipe.title }}</li>
+    <li><a href="{{ recipe.url }}">{{ recipe.title }}<a/></li>
   {% endfor %}
 {% endfor %}
 </div>
