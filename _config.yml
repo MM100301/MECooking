@@ -6,15 +6,15 @@ url: https://mm100301.github.io
 baseurl: /MECooking
 
 collections:
-  Chicken:
+  chicken:
     label: chicken
     output: true
     permalink: /book/:title
-  Beef:
+  beef:
     label: beef
     output: true
     permalink: /book/:title
-  Seafood:
+  seafood:
     label: seafood
     output: true
     permalink: /book/:title
