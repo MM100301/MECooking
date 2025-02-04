@@ -5,4 +5,16 @@ description: This will be a website where Emma and I can document our favorite r
 url: https://mm100301.github.io
 baseurl: /MECooking
 
+collections:
+  Chicken:
+    output: true
+    permalink: /book/:title
+  Beef:
+    output: true
+    permalink: /book/:title
+  Seafood:
+    output: true
+    permalink: /book/:title
+    
+
 include: ["_pages"]
