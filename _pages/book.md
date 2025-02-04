@@ -5,10 +5,4 @@ layout: about
 tags: Matthew Emma
 ---
 
-{% for recipe in site.collections %}
-  <li>
-    <h3 class="post-meta">
-      Recipe {{ recipe.title }}
-    </h3>
-  </li>
-{% endfor %}
+<p>This is just to prove that the book site is working and that the issues was the for loop</p>
