@@ -8,6 +8,8 @@ baseurl: /MECooking
 collections:
   Chicken
   Beef
-  Seafood
+  Seafood:
+    output: true
+    permalink: /book/:title
 
 include: ["_pages"]
