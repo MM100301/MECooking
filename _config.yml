@@ -7,12 +7,15 @@ baseurl: /MECooking
 
 collections:
   Chicken:
+    label: Chicken
     output: true
     permalink: /book/:title
   Beef:
+    label: Beef
     output: true
     permalink: /book/:title
   Seafood:
+    label: Seafood
     output: true
     permalink: /book/:title
     
