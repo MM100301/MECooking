@@ -9,7 +9,7 @@ collections:
   chicken:
     label: chicken
     output: true
-    permalink: /book/:title
+    permalink: /:collection/:title
   beef:
     label: beef
     output: true
@@ -17,7 +17,7 @@ collections:
   seafood:
     label: seafood
     output: true
-    permalink: /book/:title
+    permalink: /:collection/:title
   posts:
     output: false
     
