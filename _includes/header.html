@@ -1,5 +1,8 @@
 <header class="site-header">
-
+    <style>
+        .site-title {align: center; font-size: 30px;}
+        .page-link {align:right;}
+    </style>
     <div class="wrapper">
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
