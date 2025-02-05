@@ -15,6 +15,7 @@ tags: Matthew Emma
   <ul>
   {% for recipe in site.[collection.label] %}
     <li><a href="{{ recipe.url }}">{{ recipe.title }}</a></li>
+    {% endunless %}
   {% endfor %}
   </ul>
 {% endfor %}
