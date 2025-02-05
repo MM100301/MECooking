@@ -28,6 +28,9 @@ tags: Seafood Salmon Couscous Sweet
 <p>This will be a step by step of the recipe.</p>
 </div>
 <div>
+<p>Other important elements in this area could be: Cooktime, preptime, servings, inspiration
+</div>
+<div>
 <h4>About</h4>
 <p>This will be a short description of the dish and its importance to us/its history with us.</p>
 </div>

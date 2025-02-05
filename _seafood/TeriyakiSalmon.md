@@ -1,5 +1,5 @@
 ---
-title: TeriyakiSalmon
+title: Teriyaki Salmon
 layout: recipe
 tags: Seafood Salmon Couscous Sweet
 ---
@@ -26,6 +26,9 @@ tags: Seafood Salmon Couscous Sweet
 <div>
 <h4>Recipe</h4>
 <p>This will be a step by step of the recipe.</p>
+</div>
+<div>
+<p>Other important elements in this area could be: Cooktime, preptime, servings, inspiration
 </div>
 <div>
 <h4>About</h4>
