@@ -1,5 +1,5 @@
 ---
-title: book
+title: Book
 permalink: /book/
 layout: about
 tags: Matthew Emma
