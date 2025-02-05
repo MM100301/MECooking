@@ -8,6 +8,7 @@ tags: Matthew Emma
 <h1>Recipes</h1>
 <div>
 {% for collection in site.collections %}
+  {% unless collection.label == "posts" %}
   <h3 class="post-meta">
     Items in {{ collection.label }}
   </h3>

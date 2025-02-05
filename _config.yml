@@ -18,8 +18,6 @@ collections:
     label: seafood
     output: true
     permalink: MECooking/_seafood/:title
-  posts:
-    output: false
     
 
 include:
