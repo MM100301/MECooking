@@ -4,7 +4,7 @@ layout: recipe
 tags: Seafood Salmon Couscous Sweet
 ---
 
-![UsImage]({{ site.url }}{{ site.baseurl }}/assets/img/GarlicHoneyChicken.jpeg)
+<img class="recipePic" src="../assets/img/GarlicHoneyChicken.jpeg" alt="GarlicHoneyChicken">
 <div>
 <h4>Ingredients</h4>
 <ul>
