@@ -1,10 +1,10 @@
 <header class="site-header">
 
-    <div class="wrapper" horizontal-align="center" vertical-align="center">
+    <div class="wrapper" horizontal-align="right" vertical-align="right">
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
       {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-      <a class="site-title" rel="author" font-size="30" text-align="right" href="{{ "/" | relative_url }}">{{ site.title | escape }}   </a>
+      <a class="site-title" rel="author" font-size="30px" text-align="right" href="{{ "/" | relative_url }}">{{ site.title | escape }}   </a>
             {%- for path in page_paths -%}
               {%- if path contains "_pages/" -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
@@ -13,6 +13,15 @@
               {%- endif -%}
               {%- endif -%}
             {%- endfor -%}
-        </nav>
+        {% if site.enable_darkmode %}
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
+                <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
+                <i class="ti ti-sun-filled" id="light-toggle-light"></i>
+              </button>
+            </li>
+          {% endif %}
     </div>
 </header>
