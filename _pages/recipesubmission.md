@@ -9,5 +9,5 @@ permalink: /recipesub/
   <p>Each recipe submission will have some required fields:
   recipe name, ingredients, description, cook time, picture, and a password to automatically make into a recipe (if possible)</p>
 </div>
-
-{% include form.html %}
+<h2>Recipe Submissions are offline for now until I get unbanned from formspree or formkeep lol</h2>
+<!-- {% include form.html %} -->
