@@ -10,4 +10,3 @@ permalink: /recipesub/
   recipe name, ingredients, description, cook time, picture, and a password to automatically make into a recipe (if possible)</p>
 </div>
 <h2>Recipe Submissions are offline for now until I get unbanned from formspree or formkeep lol</h2>
-<!-- {% include form.html %} -->
