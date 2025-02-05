@@ -4,7 +4,7 @@ layout: recipe
 tags: Seafood Salmon Couscous Sweet
 ---
 
-![UsImage]({{ site.url }}{{ site.baseurl }}/assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg)
+<img class="recipePic" src="/assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg" alt="SteakBites">
 <div>
 <h4>Ingredients</h4>
 <ul>
