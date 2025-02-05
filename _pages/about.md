@@ -5,7 +5,7 @@ layout: about
 tags: Matthew Emma
 ---
 
-<img src="assets/img/Us.jpeg" alt="Us" align="right">
+<img src="../assets/img/Us.jpeg" alt="Us" align="right">
 
 <div>
 Hello! This is ME Cooking, a website that Matthew and Emma have created in order to document their amazing culinary feats and keep a list of recipes!
