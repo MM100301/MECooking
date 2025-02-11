@@ -4,7 +4,7 @@ layout: recipe
 tags: Seafood Salmon Couscous Sweet
 ---
 <html>
-  <body style="background-color:rgb(201, 136, 136);">
+  <body class="recipeBody">
     <h1>Teriyaki Salmon</h1>
     <img class="recipePic" src="../assets/img/TeriyakiSalmon.jpeg" alt="TeriyakiSalmon">
     <div>
