@@ -1,3 +1,7 @@
+$headerHeight: 300px;
+$toolbarHeight: 64px;
+
+body,
 p,
 h1,
 h2,
@@ -7,9 +11,10 @@ h5,
 h6,
 em,
 div,
+ul,
 li,
 span,
 strong {
-  background-color: var(--global-text-color);
+  background-color: pink;
   font-weight: bold;
 }
