@@ -3,7 +3,7 @@ title: Garlic Steak Bites
 layout: recipe
 tags: Seafood Salmon Couscous Sweet
 ---
-<link rel="stylesheet" href="../_scss/base.scss">
+<link rel="stylesheet" href="../_scss/style.css">
 <html>
   <body class="recipeBody">
     <h1>Garlic Steak Bites</h1>
