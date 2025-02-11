@@ -24,3 +24,12 @@ li {
   font-weight: bold;
   color: white;
 }
+
+.recipePic {
+  align: right;
+}
+
+.aboutUs {
+  margin-right: auto;
+  margin-left: auto;
+}
