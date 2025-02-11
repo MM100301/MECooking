@@ -25,7 +25,6 @@ include:
   - _chicken
   - _beef
   - _seafood
-  - _scss
 
 
 enable_darkmode: true
