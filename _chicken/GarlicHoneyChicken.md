@@ -4,7 +4,6 @@ layout: recipe
 tags: Seafood Salmon Couscous Sweet
 ---
 <html>
-  <link rel="stylesheet" href="../_scss/style.css">
   <body class="recipeBody">
     <h1>Garlic Honey Chicken</h1>
     <img class="recipePic" src="../assets/img/GarlicHoneyChicken.jpeg" alt="GarlicHoneyChicken">
@@ -31,7 +30,7 @@ tags: Seafood Salmon Couscous Sweet
       <p>This will be a step by step of the recipe.</p>
     </div>
     <div>
-      <p>Other important elements in this area could be: Cooktime, preptime, servings, inspiration
+      <p>Other important elements in this area could be: Cooktime, preptime, servings, inspiration</p>
     </div>
     <div>
       <h4>About</h4>
