@@ -4,6 +4,7 @@ layout: recipe
 tags: Seafood Salmon Couscous Sweet
 ---
 <html>
+  <link rel="stylesheet" href="../_scss/base.scss">
   <body class="recipeBody">
     <h1>Garlic Honey Chicken</h1>
     <img class="recipePic" src="../assets/img/GarlicHoneyChicken.jpeg" alt="GarlicHoneyChicken">
