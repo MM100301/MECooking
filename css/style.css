@@ -8,12 +8,28 @@ header {
 	position: fixed;
 	top: 0;
 	overflow: hidden;
+  nav{
+		position: absolute;
+		bottom: 0;
+		height: 60px;
+		line-height: 60px;
+		width: 100%;
+		background-color: rgba(0,0,0,.1);
+		a{
+			color: #fff;
+			display: inline-block;
+			padding: 10px 15px;
+			line-height: 1;
+			text-decoration: none;
+		}
+	}
 }
 
 body {
   background-color: #ecf0f1;
 	padding-top: 330px;
 }
+
 
 p,
 h1,
