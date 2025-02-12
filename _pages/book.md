@@ -8,7 +8,7 @@ tags: Matthew Emma
   <body>
     <h1>Recipes</h1>
     <div>
-    <p color:red >(% site.collections %)</p>
+    <p color:red >$site.collections also here</p>
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
           <h3 class="post-meta">
