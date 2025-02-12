@@ -5,10 +5,7 @@
           .site-title {margin-left:auto; margin-right:auto; font-size: 30px;}
           .page-link {margin-left:auto; margin-right:auto;}
       </style>
-      {%- assign default_paths = site.pages | map: "path" -%}
-      {%- assign page_paths = site.header_pages | default: default_paths -%}
-      {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}   </a>
+      <h1 class="site-title">MECooking</h1>
       <nav class="wrapper"></nav>
             {%- for path in page_paths -%}
               {%- if path contains "_pages/" -%}
