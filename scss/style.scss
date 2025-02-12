@@ -1,3 +1,9 @@
+@import "compass/css3";
+@import "compass/reset";
+
+*{
+	@include box-sizing(border-box);
+}
 
 header {
 	width: 100%;
@@ -9,6 +15,7 @@ header {
 	position: fixed;
 	top: 0;
 	overflow: hidden;
+	@include transition(all .5s ease);
 }
 
 nav {
@@ -20,17 +27,10 @@ nav {
 	background-color: rgba(0,0,0,.1);
 }
 
-a {
-	color: #fff;
-	display: inline-block;
-	padding: 10px 15px;
-	line-height: 1;
-	text-decoration: none;
-}
-
 body {
-  background-color: #ecf0f1;
+  	background-color: #ecf0f1;
 	padding-top: 330px;
+	@include transition(padding-top .5s ease)
 }
 
 p,
@@ -38,7 +38,14 @@ h1,
 div,
 ul,
 li {
-  font-weight: bold;
+  	font-weight: bold;
+}
+
+.siteTitle {
+	margin-left: auto; 
+	margin-right: auto; 
+	font-size: 30px;
+	@include transition(all .3s ease);
 }
 
 .navLink {
@@ -46,7 +53,11 @@ li {
 	display: inline-block;
 	padding: 10px 15px;
 	line-height: 1;
-	text-decoration: none; 
+	text-decoration: none;
+	@include border-radius(2px);
+        &:hover{
+          @include box-shadow(0 0 0 1px #fff);
+        }
 }
 
 .recipePic {
