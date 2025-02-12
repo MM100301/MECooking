@@ -5,7 +5,7 @@ tags: Seafood Salmon Couscous Sweet
 ---
 <html>
   <body class="recipeBody">
-    <h1>Teriyaki Salmon</h1>
+    <h1 text-align="center">Teriyaki Salmon</h1>
     <img class="recipePic" src="../../assets/img/TeriyakiSalmon.jpeg" alt="TeriyakiSalmon">
     <div>
       <h4>Ingredients</h4>
