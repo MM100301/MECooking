@@ -9,19 +9,20 @@ collections:
   chicken:
     label: chicken
     output: true
-    permalink: MECooking/_chicken/:title
+    permalink: MECooking/_recipes/_chicken/:title
   beef:
     label: beef
     output: true
-    permalink: MECooking/_beef/:title
+    permalink: MECooking/_recipes/_beef/:title
   seafood:
     label: seafood
     output: true
     permalink: MECooking/_seafood/:title
-    
+
 
 include:
   - _pages
+  - _recipes
   - _chicken
   - _beef
   - _seafood
