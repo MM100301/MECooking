@@ -26,8 +26,7 @@ nav {
 	width: 100%;
 	background-color: rgba(0,0,0,.1);
 	a {
-		color: #000;
-		vertical-align: middle;
+		color: #fff;
 		display: inline-block;
 		padding: 10px 15px;
 		line-height: 1;
@@ -36,12 +35,7 @@ nav {
 
 	}
 	a:hover {
-		color: #fff;
-		vertical-align: middle;
-		display: inline-block;
-		padding: 10px 15px;
-		line-height: 1;
-		text-decoration: none;
+		color: #000;
 		@include border-radius(2px);
 		@include box-shadow(0 0 0 1px #fff);
 
