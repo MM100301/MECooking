@@ -19,7 +19,7 @@ collections:
   seafood:
     label: seafood
     output: true
-    permalink: MECooking/_seafood/:title
+    permalink: MECooking/_recipes/_seafood/:title
 
 
 include:
