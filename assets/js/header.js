@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function changeColor() {
-    button.style.color = "black";
+    var elements = document.querySelectorAll(".change");
+    elements.forEach(function(element) {
+      element.style.color = "black";
+    });
   }
 });
