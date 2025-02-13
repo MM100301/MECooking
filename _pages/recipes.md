@@ -6,6 +6,7 @@ tags: Matthew Emma
 ---
 <html>
   <body>
+    <script src="../assets/js/button.js"></script>
     <h1>Recipes</h1>
     <div>
       {% for collection in site.collections %}
@@ -22,5 +23,6 @@ tags: Matthew Emma
       {% endfor %}
     </div>
     <p>This is just to prove that the book site is working and that the issue was the for loop</p>
+    <button class="green">Click to change color</button>
   </body>
 </html>
