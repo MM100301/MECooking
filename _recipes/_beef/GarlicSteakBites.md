@@ -6,7 +6,7 @@ tags: Seafood Salmon Couscous Sweet
 <html>
   <body class="recipeBody">
     <h1 text-align="center">Garlic Steak Bites</h1>
-    <img class="recipePic" src="../../assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg" alt="GarlicSteakBites">
+    <img class="recipePic" src="{{ site.url }}/{{ site.baseurl }}/assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg" alt="GarlicSteakBites">
     <div>
       <h4>Ingredients</h4>
       <ul>

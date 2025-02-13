@@ -7,7 +7,7 @@ tags: Seafood Salmon Couscous Sweet
   <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/header.js"></script>
   <body class="change">
     <h1 class="recipeTitle">Garlic Honey Chicken</h1>
-    <img class="recipePic" src="../../assets/img/GarlicHoneyChicken.jpeg" alt="GarlicHoneyChicken">
+    <img class="recipePic" src="{{ site.url }}/{{ site.baseurl }}/assets/img/GarlicHoneyChicken.jpeg" alt="GarlicHoneyChicken">
     <div>
       <h4>Ingredients</h4>
       <ul class="change">
