@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const header = document.querySelector("header"); // Assuming you have a header element
 
   window.addEventListener("scroll", function() {
-    if (window.scrollY > 30) {
-      console.log("Removing sticky class");
-      header.classList.remove("sticky");
-    } else {
+    if (window.scrollY < 30) {
       console.log("Adding sticky class");
       header.classList.add("sticky");
+    } else {
+      console.log("Removing sticky class");
+      header.classList.remove("sticky");
     }
   });
 });
