@@ -3,5 +3,10 @@ In no particular order do these things:
 2. Correct image sizes for both phone and pc
 3. Figure out alignment of header
 4. Get unbanned from formkeep/formwhatever
-5. 
+5.
 6.
+
+Other Ideas:
+1. Random recipe selector, maybe for up to 7 recipes
+2. Newest recipe updates
+3. life updates on site?
