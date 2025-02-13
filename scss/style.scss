@@ -3,8 +3,6 @@ header {
 	width: 100%;
 	height: 150px;
 	background-color: #89e68f;
-	position: relative;
-	position: fixed;
 	top: 0;
 	overflow: hidden;
 	@include transition(all .5s ease);
@@ -31,6 +29,8 @@ nav {
 		color: #fff;
 		display: inline-block;
 		padding: 10px 15px;
+		line-height: 1;
+		text-decoration: none;
 		@include border-radius(2px);
 
 	}
@@ -68,6 +68,8 @@ body.sticky-header{
 
 .sticky {
 	background-color: #3498db;
+	position: relative;
+	position: fixed;
 }
 
 .recipePic {
