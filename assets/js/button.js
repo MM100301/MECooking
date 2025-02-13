@@ -1,4 +1,4 @@
-var button = document.getElementsById("button");
+var button = document.getElementById("button");
 
 button.onclick = changeColor();
 
