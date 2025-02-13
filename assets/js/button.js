@@ -1,7 +1,7 @@
-var button = document.getElementById("button");
+var button = document.querySelector(".button");
 
-button.onclick = changeColor();
+button.addEventListener("click", changeColor);
 
 function changeColor() {
-  button.backgroundColor = "blue";
+  button.style.backgroundColor = "blue";
 }
