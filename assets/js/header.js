@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var button = document.querySelector("button");
+  console.log("DOM fully loaded and parsed");
 
-  if (button) {
-    button.addEventListener("click", changeColor);
-  }
+  window.addEventListener("scroll", function() {
+    console.log("Scroll event detected");
+    console.log("window.scrollY:", window.scrollY);
 
-  function changeColor() {
-    var elements = document.querySelectorAll(".change");
-    elements.forEach(function(element) {
-      element.style.color = "black";
-    });
-  }
+    if (window.scrollY > 0) {
+      console.log("Removing sticky class");
+      header.classList.remove("sticky");
+    } else {
+      console.log("Adding sticky class");
+      header.classList.add("sticky");
+    }
+  });
 });
