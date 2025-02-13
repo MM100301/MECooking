@@ -6,7 +6,6 @@ tags: Matthew Emma
 order: 3
 ---
 <html>
-  <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/header.js"></script>
   <body>
     <h1>Recipes</h1>
     <div>
