@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const header = document.querySelector("header"); // Assuming you have a header element
 
   window.addEventListener("scroll", function() {
-    console.log("Scroll event detected");
-    console.log("window.scrollY:", window.scrollY);
-
     if (window.scrollY > threshold) {
       console.log("Removing sticky class");
       header.classList.remove("sticky");
