@@ -1,7 +1,7 @@
-var button = document.getElementsByID("button");
+var button = document.getElementsByClassName("button");
 
 button.onclick = changeColor();
 
 function changeColor() {
-  this.backgroundColor = "blue";
+  this.backgroundColor = "green";
 }
