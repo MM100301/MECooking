@@ -7,7 +7,6 @@ order: 3
 ---
 <html>
   <body>
-    <script src="../assets/js/header.js"></script>
     <h1>Recipes</h1>
     <div>
       {% for collection in site.collections %}
