@@ -1,7 +1,11 @@
-var button = document.querySelector(".button");
+document.addEventListener("DOMContentLoaded", function() {
+  var button = document.querySelector(".button");
 
-button.addEventListener("click", changeColor);
+  if (button) {
+    button.addEventListener("click", changeColor);
+  }
 
-function changeColor() {
-  button.style.backgroundColor = "blue";
-}
+  function changeColor() {
+    button.style.backgroundColor = "blue";
+  }
+});
