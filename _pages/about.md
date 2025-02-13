@@ -6,6 +6,7 @@ tags: Matthew Emma
 order: 2
 ---
 <html>
+    <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/header.js"></script>
     <body>
         <img src="/assets/img/Us.jpeg" alt="Us" align="right">
         <div class="aboutUs">

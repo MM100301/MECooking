@@ -10,48 +10,48 @@ tags: Seafood Salmon Couscous Sweet
     <img class="recipePic" src="{{ site.url }}/{{ site.baseurl }}/assets/img/GarlicHoneyChicken.jpeg" alt="GarlicHoneyChicken">
     <div>
       <h4>Ingredients</h4>
-      <ul class="change">
+      <ul>
         <li>1 lb Salmon</li>
         <li>2 cups of couscous</li>
         <li>Green onion</li>
         <li>Sesame Seeds</li>
         <li>Honey Teriyaki Sauce</li>
           <ul>
-            <li class="change" >Teriyaki sauce</li>
-            <li class="change" >Honey</li>
-            <li class="change" >Oil</li>
-            <li class="change" >Black Pepper</li>
-            <li class="change" >Garlic Powder</li>
-            <li class="change" >Soy Sauce</li>
-            <li class="change" >Cut from here</li>
-            <li class="change" >Teriyaki sauce</li>
-            <li class="change" >Honey</li>
-            <li class="change" >Oil</li>
-            <li class="change" >Black Pepper</li>
-            <li class="change" >Garlic Powder</li>
-            <li class="change" >Soy Sauce</li>
-            <li class="change" >Teriyaki sauce</li>
-            <li class="change" >Honey</li>
-            <li class="change" >Oil</li>
-            <li class="change" >Black Pepper</li>
-            <li class="change" >Garlic Powder</li>
-            <li class="change" >Soy Sauce</li>
-            <li class="change" >Teriyaki sauce</li>
-            <li class="change" >Honey</li>
-            <li class="change" >Oil</li>
-            <li class="change" >Black Pepper</li>
-            <li class="change" >Garlic Powder</li>
-            <li class="change" >Soy Sauce</li>
-            <li class="change" >Teriyaki sauce</li>
-            <li class="change" >Honey</li>
-            <li class="change" >Oil</li>
-            <li class="change" >Black Pepper</li>
-            <li class="change" >Garlic Powder</li>
-            <li class="change" >Soy Sauce</li>
-            <li class="change" >Teriyaki sauce</li>
-            <li class="change" >Honey</li>
-            <li class="change" >Oil</li>
-            <li class="change" >Black Pepper</li>
+            <li>Teriyaki sauce</li>
+            <li>Honey</li>
+            <li>Oil</li>
+            <li>Black Pepper</li>
+            <li>Garlic Powder</li>
+            <li>Soy Sauce</li>
+            <li>Cut from here</li>
+            <li>Teriyaki sauce</li>
+            <li>Honey</li>
+            <li>Oil</li>
+            <li>Black Pepper</li>
+            <li>Garlic Powder</li>
+            <li>Soy Sauce</li>
+            <li>Teriyaki sauce</li>
+            <li>Honey</li>
+            <li>Oil</li>
+            <li>Black Pepper</li>
+            <li>Garlic Powder</li>
+            <li>Soy Sauce</li>
+            <li>Teriyaki sauce</li>
+            <li>Honey</li>
+            <li>Oil</li>
+            <li>Black Pepper</li>
+            <li>Garlic Powder</li>
+            <li>Soy Sauce</li>
+            <li>Teriyaki sauce</li>
+            <li>Honey</li>
+            <li>Oil</li>
+            <li>Black Pepper</li>
+            <li>Garlic Powder</li>
+            <li>Soy Sauce</li>
+            <li>Teriyaki sauce</li>
+            <li>Honey</li>
+            <li>Oil</li>
+            <li>Black Pepper</li>
             <li>Garlic Powder</li>
             <li>Soy Sauce</li>
             <li>Teriyaki sauce</li>

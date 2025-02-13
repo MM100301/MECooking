@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var button = document.querySelector("button");
+  var button = document.querySelector(".button");
 
   if (button) {
     button.addEventListener("click", changeColor);
   }
 
   function changeColor() {
-    button.style.color = "black";
+    button.style.backgroundColor = "blue";
   }
 });
