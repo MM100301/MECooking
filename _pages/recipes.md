@@ -7,7 +7,7 @@ order: 3
 ---
 <html>
   <body>
-    <script src="../assets/js/button.js"></script>
+    <script src="../assets/js/header.js"></script>
     <h1>Recipes</h1>
     <div>
       {% for collection in site.collections %}
@@ -23,7 +23,5 @@ order: 3
         {% endunless %}
       {% endfor %}
     </div>
-    <p>This is just to prove that the book site is working and that the issue was the for loop</p>
-    <button id="button" class="button">Click to change color</button>
   </body>
 </html>

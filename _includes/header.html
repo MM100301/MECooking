@@ -5,17 +5,16 @@
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
         {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-        {%- assign sorted_pages = site.pages | sort:"order" %}
         <h1>{{ site.title }}</h1>
         <nav>
-          {%- for path in page_paths -%}
-            {%- if path contains "_pages/" -%}
-            {%- assign my_page = sorted_pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="navLink" href="{{ my_page.url | relative_url }}">  {{ my_page.title | escape }}   </a>
+            {%- assign ordered_pages = site.pages | sort: "order" -%}
+            {%- for page in ordered_pages -%}
+            {%- if page.path contains "_pages/" -%}
+            {%- if page.title -%}
+            <a class="navLink" href="{{ page.url | relative_url }}">  {{ page.title | escape }}   </a>
             {%- endif -%}
             {%- endif -%}
-          {%- endfor -%}
+            {%- endfor -%}
         </nav>
     </header>
   </body>
