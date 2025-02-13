@@ -8,6 +8,6 @@ $(function(){
       }else{
         $("body").removeClass("sticky-header");
         console.log("remove header");
-      }//if-else
-    });//win func.
-  });//ready func.
+      }
+    });
+  });

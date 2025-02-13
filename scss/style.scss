@@ -8,6 +8,7 @@
 header {
 	width: 100%;
 	height: 150px;
+	float: left;
 	background-color: #3498db;
 	position: relative;
 	position: fixed;
@@ -27,6 +28,7 @@ header {
 
 nav {
 	position: absolute;
+	float: left;
 	bottom: 0;
 	height: 60px;
 	line-height: 60px;

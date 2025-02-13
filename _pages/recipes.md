@@ -1,6 +1,6 @@
 ---
-title: Book
-permalink: /book/
+title: Recipes
+permalink: /recipes/
 layout: about
 tags: Matthew Emma
 ---
