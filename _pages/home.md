@@ -3,6 +3,7 @@ title: Home
 permalink: /
 layout: home
 tags: Matthew Emma
+order: 1
 ---
 <html>
     <body>

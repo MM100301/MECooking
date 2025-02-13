@@ -3,6 +3,7 @@ title: About
 permalink: /about/
 layout: about
 tags: Matthew Emma
+order: 2
 ---
 <html>
     <body>

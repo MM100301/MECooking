@@ -2,6 +2,7 @@
 title: Recipe Submission
 layout: recipeSub
 permalink: /recipesub/
+order: 5
 ---
 <html>
   <body>
