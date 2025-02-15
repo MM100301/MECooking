@@ -1,7 +1,7 @@
 <html>
   <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/header.js"></script>
     <link rel="stylesheet" href="{{ site.url }}/{{ site.baseurl }}/scss/style.scss">
-    <header class="sticky">
+    <header>
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
         {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}

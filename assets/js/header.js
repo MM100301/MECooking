@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM fully loaded and parsed");
 
-  const header = document.querySelector("header"); // Assuming you have a header element
+  const body = document.querySelector("body");
 
   window.addEventListener("scroll", function() {
     if (window.scrollY < 30) {
-      console.log("Adding sticky class");
-      header.classList.add("sticky");
-    } else {
       console.log("Removing sticky class");
-      header.classList.remove("sticky");
+      body.classList.remove("sticky");
+    } else {
+      console.log("Adding sticky class");
+      body.classList.add("sticky");
     }
   });
 });
