@@ -22,9 +22,6 @@ tags: Seafood Salmon Couscous Sweet
             <li>Black Pepper</li>
             <li>Garlic Powder</li>
             <li>Soy Sauce</li>
-            {% for tag in site.tags %}
-              <li>{{ tag }}</li>
-            {% endfor %}
           </ul>
       </ul>
     </div>
