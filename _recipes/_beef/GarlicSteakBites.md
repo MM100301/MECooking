@@ -1,7 +1,7 @@
 ---
 title: Garlic Steak Bites
 layout: recipe
-tags: Seafood Salmon Couscous Sweet
+tags: Beef Couscous Long Emma
 ---
 <html>
   <body class="recipeBody">

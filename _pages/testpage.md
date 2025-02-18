@@ -6,16 +6,16 @@ tags: Test
 order: 6
 ---
 
-{% for page in site.pages %}
-<p> {{ page.title }}</p>
-{% endfor %}
-
+{% assign recipe_tags = "" | split: ',' %}
 
 {% for collection in site.collections %}
   {% unless collection.label == "posts" %}
+    <h3 class="post-meta">
+      Items in {{ collection.label }}
+    </h3>
     <ul>
       {% for recipe in site[collection.label] %}
-        <li>{{ recipe.title }}</li>
+        {% assign recipe_tags = recipe_tags | concat:recipe.tags %}
       {% endfor %}
     </ul>
   {% endunless %}

@@ -1,7 +1,7 @@
 ---
 title: Garlic Honey Chicken
 layout: recipe
-tags: Seafood Salmon Couscous Sweet
+tags: Chicken Spicy Rice
 ---
 <html>
   <body>
