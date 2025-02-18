@@ -7,9 +7,16 @@ order: 4
 
 <html>
   <body>
-    <button id="tagSearch">Tag Search</button>
-    <button id="titleSearch">Recipe Title Search</button>
-    <input type="text" id="searchBar"></input>
+    <div>
+      <button id="tagButton">Tag Search</button>
+      <button id="titleButton">Recipe Title Search</button>
+    </div>
+    <div>
+      <input type="text" id="searchBar">
+    </div>
+    <div>
+      <h1>Button Test Text (Not ready)</h1>
+    </div>
   </body>
 </html>
 
