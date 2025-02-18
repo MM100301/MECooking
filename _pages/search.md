@@ -11,8 +11,8 @@ order: 4
   <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/buttons.js"></script>
   <body>
     <div>
-      <button id="tagButton">Tag Search</button>
-      <button id="titleButton">Recipe Title Search</button>
+      <button id="tagButton" onclick="searchBy('tag')">Tag Search</button>
+      <button id="titleButton" onclick="searchBy('title')">Recipe Title Search</button>
     </div>
     <div>
       <input type="text" id="searchBar">
