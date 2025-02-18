@@ -5,6 +5,8 @@ layout: about
 order: 4
 ---
 
+{% assign choice = "Title" %}
+
 <html>
   <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/buttons.js"></script>
   <body>
@@ -16,7 +18,7 @@ order: 4
       <input type="text" id="searchBar">
     </div>
     <div>
-      <h1 class="testText">Button Test Text (Not ready)</h1>
+      <h1 class="testText">{{ choice }}</h1>
     </div>
   </body>
 </html>
