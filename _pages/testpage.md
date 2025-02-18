@@ -11,7 +11,7 @@ order: 6
 {% for collection in site.collections %}
   {% unless collection.label == "posts" %}
       {% for recipe in site[collection.label] %}
-        {% assign recipe_tags = recipe_tags | concat:recipe.tags %}
+        {% assign recipe_tags = recipe_tags | push: recipe.tags %}
       {% endfor %}
   {% endunless %}
 {% endfor %}
