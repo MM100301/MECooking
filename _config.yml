@@ -5,6 +5,7 @@ description: This will be a website where Emma and I can document our favorite r
 url: https://mm100301.github.io
 baseurl: /MECooking
 
+tags: [Matthew, Emma, Seafood, Salmon, Couscous, Sweet]
 
 collections_dir: "_recipes"
 collections:
