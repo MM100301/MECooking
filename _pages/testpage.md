@@ -15,8 +15,7 @@ order: 6
       {% endfor %}
   {% endunless %}
 {% endfor %}
-{% assign recipe_tags = recipe_tags | remove: "\n" | split: " " %}
-{% assign recipe_tags = recipe_tags | uniq %}
+{% assign recipe_tags = recipe_tags | uniq | split: " " %}
 
 <p>{{ recipe_tags }}</p>
 
