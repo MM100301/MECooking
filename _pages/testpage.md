@@ -18,10 +18,13 @@ order: 6
 
 {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
 
-<p>{{ recipe_tags }}</p>
-
-<ul>
 {% for tag in recipe_tags %}
-<li>{{ tag }}</li>
+<h3>Recipes With {{ tag }}</h3>
+<ul>
+{% for page in site.pages %}
+  {% if {{ page.tags }} contains {{ tag }} %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
+{% endfor %}
