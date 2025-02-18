@@ -11,11 +11,11 @@ order: 6
 {% for collection in site.collections %}
   {% unless collection.label == "posts" %}
       {% for recipe in site[collection.label] %}
-        {% assign recipe_tags = recipe_tags | push: recipe.tags %}
+        {% assign recipe_tags = recipe_tags | strip_newlines | split:' ' %}
       {% endfor %}
   {% endunless %}
 {% endfor %}
-{{ recipe_tags | sort | uniq }}
+
 
 <p>{{ recipe_tags }}</p>
 
