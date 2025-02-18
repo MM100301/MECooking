@@ -48,13 +48,6 @@ body {
 	@include transition(padding-top .5s ease)
 }
 
-p,
-div,
-ul,
-li {
-  	font-weight: bold;
-}
-
 body.sticky{
 	padding-top: 100px;
 	header{
