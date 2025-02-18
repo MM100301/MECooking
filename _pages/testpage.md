@@ -17,4 +17,6 @@ order: 6
 {% endfor %}
 {%- assign recipe_tags = recipe_tags | remove: "\n" | split: " " -%}
 
+{{ recipe_tags | jsonify }}
+
 <p>{{ recipe_tags }}</p>
