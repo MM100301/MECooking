@@ -15,7 +15,7 @@ order: 6
       {% endfor %}
   {% endunless %}
 {% endfor %}
-{% recipe_tags | sort | uniq %}
+{{ recipe_tags | sort | uniq }}
 
 <p>{{ recipe_tags }}</p>
 
