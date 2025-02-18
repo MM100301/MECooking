@@ -2,7 +2,6 @@
 title: Test Page
 permalink: /testpage/
 layout: about
-tags: Test
 order: 6
 ---
 

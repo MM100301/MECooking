@@ -2,7 +2,6 @@
 title: Recipes
 permalink: /recipes/
 layout: about
-tags: Matthew Emma
 order: 3
 ---
 <html>
