@@ -19,3 +19,8 @@ order: 6
 {% assign recipe_tags = recipe_tags | uniq %}
 
 <p>{{ recipe_tags }}</p>
+
+<ul>
+{% for tag in recipe_tags %}
+<li>{{ tag }}</li>
+</ul>
