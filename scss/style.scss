@@ -1,11 +1,11 @@
 
 header {
+	width: 100%;
+	height: 1px;
 	background-color: #3498db;
 	position: relative;
 	position: fixed;
 	top: 0;
-	width: 100%;
-	height: 150px;
 	overflow: hidden;
 	@include transition(all .5s ease);
 	h1 {
@@ -21,6 +21,7 @@ header {
 		position: absolute;
 		bottom: 0;
 		text-align: center;
+		vertical-align: middle;
 		height: 60px;
 		line-height: 60px;
 		width: 100%;
@@ -33,12 +34,18 @@ header {
 			text-decoration: none;
 			@include border-radius(2px);
 		}
+		a:hover {
+			color: #000;
+			@include border-radius(2px);
+			@include box-shadow(0 0 0 1px #fff);
+
+		}
 	}
 }
 
 body {
   	background-color: #ecf0f1;
-	padding-top: 180px;
+	padding-top: 200px;
 	@include transition(padding-top .5s ease)
 }
 
@@ -49,25 +56,16 @@ li {
   	font-weight: bold;
 }
 
-body.sticky{
+body.sticky-header{
 	padding-top: 100px;
 	header{
 		height: 60px;
-		background-color: rgba(52, 152, 219, 0.9);
+		background-color: rgba(52,152,219,.9);
 		h1{
+			height: 0px;
 			@include scale(0);
 		}
 	}
-}
-
-.stickyold {
-	background-color: #3498db;
-	position: relative;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 150px;
-	overflow: hidden;
 }
 
 .recipePic {
