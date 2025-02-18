@@ -22,7 +22,7 @@ order: 6
 <h3>Recipes With {{ tag }}</h3>
 <ul>
 {% for page in site.pages %}
-  {% if {{ page.tags }} contains {{ tag }} %}
+  {% if page.tags contains tag %}
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endif %}
 {% endfor %}
