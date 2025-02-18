@@ -9,16 +9,7 @@ order: 6
   <body>
     <h1>Site Tags</h1>
     <div>
-      {% for tag in site.tags %}
-        <h3 class="post-meta">
-          Pages tagged with "{{ tag }}"
-        </h3>
-        <ul>
-          {% for page in tag %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-          {% endfor %}
-        </ul>
-      {% endfor %}
+      <p>{{ page.tags }}</p>
     </div>
   </body>
 </html>
