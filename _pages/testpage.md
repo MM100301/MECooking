@@ -11,10 +11,12 @@ order: 6
 {% for collection in site.collections %}
   {% unless collection.label == "posts" %}
       {% for recipe in site[collection.label] %}
-        {% assign recipe_tags = recipe_tags | concat:recipe.tags | split: ' '%}
+        {% assign recipe_tags = recipe_tags | concat:recipe.tags %}
       {% endfor %}
   {% endunless %}
 {% endfor %}
+
+{% assign recipe_tags = recipe_tags | split: ' ' %}
 
 <p>{{ recipe_tags }}</p>
 
