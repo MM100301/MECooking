@@ -62,7 +62,7 @@ body.sticky-header{
 		height: 60px;
 		background-color: rgba(52,152,219,.9);
 		h1{
-			height: 0px;
+			height: 1px;
 			@include scale(0);
 		}
 	}
