@@ -23,4 +23,5 @@ order: 6
 <ul>
 {% for tag in recipe_tags %}
 <li>{{ tag }}</li>
+{% endfor %}
 </ul>
