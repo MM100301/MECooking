@@ -6,10 +6,11 @@ order: 4
 ---
 
 <html>
+  <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/buttons.js"></script>
   <body>
     <div>
-      <button id="tagButton" class="tagButton">Tag Search</button>
-      <button id="titleButton" class="titleButton">Recipe Title Search</button>
+      <button id="tagButton">Tag Search</button>
+      <button id="titleButton">Recipe Title Search</button>
     </div>
     <div>
       <input type="text" id="searchBar">
