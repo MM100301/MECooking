@@ -6,7 +6,9 @@ tags: Test
 order: 6
 ---
 
-<p> {{ site.pages }}</p>
+{% for page in site.pages %}
+<p> {{ page.title }}</p>
+{% endfor %}
 
 
 {% for collection in site.collections %}
