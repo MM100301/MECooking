@@ -9,7 +9,7 @@ order: 6
   <body>
     <h1>Site Tags</h1>
     <div>
-      <p>{{ page.tags }}</p>
+      <p>{{ page.tags}} and also {{ site.tags }}</p>
     </div>
   </body>
 </html>
