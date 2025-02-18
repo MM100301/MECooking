@@ -6,7 +6,6 @@ order: 4
 ---
 
 <html>
-  <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/buttons.js"></script>
   <body>
     <div>
       <button id="tagButton" class="tagButton">Tag Search</button>
