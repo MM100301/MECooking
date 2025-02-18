@@ -56,13 +56,13 @@ li {
   	font-weight: bold;
 }
 
-body.sticky-header{
+body.sticky{
 	padding-top: 100px;
 	header{
 		height: 60px;
 		background-color: rgba(52,152,219,.9);
 		h1{
-			height: 1px;
+			height: 0px;
 			@include scale(0);
 		}
 	}
