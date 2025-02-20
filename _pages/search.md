@@ -5,20 +5,20 @@ layout: about
 order: 4
 ---
 
-{% assign choice = "Title" %}
+
 
 <html>
   <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/buttons.js"></script>
   <body>
     <div>
-      <button id="tagButton" onclick="searchBy('tag')">Tag Search</button>
-      <button id="titleButton" onclick="searchBy('title')">Recipe Title Search</button>
+      <button id="tagButton">Tag Search</button>
+      <button id="titleButton">Recipe Title Search</button>
     </div>
     <div>
       <input type="text" id="searchBar">
     </div>
     <div>
-      <h1 class="testText">{{ choice }}</h1>
+      <h1 id="testText">Searching By Title</h1>
     </div>
   </body>
 </html>

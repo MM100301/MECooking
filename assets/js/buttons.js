@@ -1,31 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
   const tagButton = document.getElementById("tagButton");
   const titleButton = document.getElementById("titleButton");
+  const testText = document.getElementById("testText");
 
-  let choice = "";
-
-  function handleButtonClick(selectedChoice) {
-    choice = selectedChoice;
-    if (choice === "tag") {
-      tagButton.style.backgroundColor = "red";
-      titleButton.style.backgroundColor = "blue";
-    } else if (choice === "title") {
-      titleButton.style.backgroundColor = "red";
-      tagButton.style.backgroundColor = "blue";
-    }
+  function handleTagButtonClick() {
+    tagButton.style.backgroundColor = "red";
+    titleButton.style.backgroundColor = "blue";
+    testText.textContent = "Tag";
   }
 
-  tagButton.addEventListener("click", function() {
-    handleButtonClick("tag");
-  });
-
-  titleButton.addEventListener("click", function() {
-    handleButtonClick("title");
-  });
-
-  titleButton.addEventListener("click", function() {
+  function handleTitleButtonClick() {
     titleButton.style.backgroundColor = "red";
     tagButton.style.backgroundColor = "blue";
-    choice = "title";
-  })
+    testText.textContent = "Title";
+  }
+
+  tagButton.addEventListener("click", handleTagButtonClick);
+  titleButton.addEventListener("click", handleTitleButtonClick);
+
 });
