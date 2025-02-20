@@ -1,29 +1,29 @@
 ---
+```markdown
 title: Test Page
 permalink: /testpage/
 layout: about
 order: 6
 ---
 
-{% assign recipe_tags = "" | split: ',' %}
+{% assign all_data = "" | split: ',' %}
 
 {% for collection in site.collections %}
   {% unless collection.label == "posts" %}
-      {% for recipe in site[collection.label] %}
-        {% assign recipe_tags = recipe_tags | concat:recipe.tags %}
+      {% for page in site[collection.label] %}
+        {% assign page_data = {
+          "title": page.title,
+          "url": page.url,
+          "tags": page.tags
+        } %}
+        {% assign all_data = all_data | push: page_data %}
       {% endfor %}
   {% endunless %}
 {% endfor %}
 
-{% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
+{% assign json_data = all_data | jsonify %}
 
-{% for tag in recipe_tags %}
-<h3>Recipes With {{ tag }}</h3>
-<ul>
-{% for page in site.pages %}
-  {% if page.tags contains tag %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-{% endfor %}
+<script type="application/json" id="page-data">
+{{ json_data }}
+</script>
+```
