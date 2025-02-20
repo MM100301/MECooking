@@ -9,6 +9,7 @@ order: 4
 
 <html>
   <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/buttons.js"></script>
+  <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/titleSearch.js"></script>
   <body>
     <div>
       <button id="tagButton">Tag Search</button>
@@ -19,6 +20,7 @@ order: 4
     </div>
     <div>
       <h1 id="testText">Searching By Title</h1>
+      <p id="testPara">This is a test for the search bar</p>
     </div>
   </body>
 </html>
