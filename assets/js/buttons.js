@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", function() {
   function handleTagButtonClick() {
     tagButton.style.backgroundColor = "red";
     titleButton.style.backgroundColor = "blue";
-    testText.textContent = "Tag";
+    testText.textContent = "Searching By Tag";
   }
 
   function handleTitleButtonClick() {
     titleButton.style.backgroundColor = "red";
     tagButton.style.backgroundColor = "blue";
-    testText.textContent = "Title";
+    testText.textContent = "Searching By Title";
   }
 
   tagButton.addEventListener("click", handleTagButtonClick);
