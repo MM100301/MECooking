@@ -24,6 +24,7 @@ order: 6
           {% endfor %}
         </ul>
       <p id="theGraph"></p>
+      <div id="recipeList"></div>
         <script>
       function searchTags() {
         var input, filter, tags, i, txtValue;
