@@ -24,25 +24,6 @@ order: 6
           {% endfor %}
         </ul>
         <script>
-          function searchTags() {
-            var input, filter, tags, i, txtValue;
-            input = document.getElementById('searchInput');
-            filter = input.value.toLowerCase();
-            tags = {{ recipe_tags | jsonify }};
-            var tagList = document.getElementById("tagList");
-            tagList.innerHTML = '';
-            for (i = 0; i < tags.length; i++) {
-              txtValue = tags[i];
-              if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                var li = document.createElement('li');
-                li.textContent = txtValue;
-                tagList.appendChild(li);
-              }
-            }
-          }
-        </script>
-    <div id="recipeList"></div>
-    <script>
       function searchTags() {
         var input, filter, tags, i, txtValue;
         input = document.getElementById('searchInput');
