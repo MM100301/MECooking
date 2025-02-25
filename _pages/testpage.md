@@ -17,20 +17,30 @@ order: 6
         {% endunless %}
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
-        <form method="get" action="search">
-          <input type="text" name="query" placeholder="Search tags">
-          <input type="submit" value="Search">
-        </form>
-        {% if request.query.query %}
-          {% assign search_word = request.query.query %}
-          <ul>
-            {% for tag in recipe_tags %}
-          {% if tag contains search_word %}
+        <input type="text" id="searchInput" placeholder="Search tags" oninput="searchTags()">
+        <ul id="tagList">
+          {% for tag in recipe_tags %}
             <li>{{ tag }}</li>
-          {% endif %}
-            {% endfor %}
-          </ul>
-        {% endif %}
+          {% endfor %}
+        </ul>
+        <script>
+          function searchTags() {
+            var input, filter, tags, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toLowerCase();
+            tags = {{ recipe_tags | jsonify }};
+            var tagList = document.getElementById("tagList");
+            tagList.innerHTML = '';
+            for (i = 0; i < tags.length; i++) {
+              txtValue = tags[i];
+              if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                var li = document.createElement('li');
+                li.textContent = txtValue;
+                tagList.appendChild(li);
+              }
+            }
+          }
+          </script>
     </div>
   </body>
 </html>
