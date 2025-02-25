@@ -17,16 +17,20 @@ order: 6
         {% endunless %}
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
-      {% for tag in recipe_tags %}
-      <h3>Recipes With {{ tag }}</h3>
-      <ul>
-      {% for page in site.pages %}
-        {% if page.tags contains tag %}
-          <li><a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.url }}</a></li>
+        <form method="get" action="search">
+          <input type="text" name="query" placeholder="Search tags">
+          <input type="submit" value="Search">
+        </form>
+        {% if request.query.query %}
+          {% assign search_word = request.query.query %}
+          <ul>
+            {% for tag in recipe_tags %}
+          {% if tag contains search_word %}
+            <li>{{ tag }}</li>
+          {% endif %}
+            {% endfor %}
+          </ul>
         {% endif %}
-      {% endfor %}
-      </ul>
-      {% endfor %}
     </div>
   </body>
 </html>
