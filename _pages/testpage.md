@@ -23,6 +23,7 @@ order: 6
             <li>{{ tag }}</li>
           {% endfor %}
         </ul>
+      <p id="theGraph"></p>
         <script>
       function searchTags() {
         var input, filter, tags, i, txtValue;
@@ -31,6 +32,7 @@ order: 6
         tags = {{ recipe_tags | jsonify }};
         var tagList = document.getElementById("tagList");
         var recipeList = document.getElementById("recipeList");
+        var recipeParagraph = document.getElementById("theGraph");
         tagList.innerHTML = '';
         recipeList.innerHTML = '';
         for (i = 0; i < tags.length; i++) {
@@ -49,8 +51,7 @@ order: 6
           {% endfor %}
         {% endunless %}
       {% endfor %}
-      var p = document.createElement('p');
-      p.textContent = "Recipes with tag '" + txtValue + "': " + recipes.join(', ');
+      recipeParagraph.textContent = "Recipes with tag '" + txtValue + "': " + recipes.join(', ');
       recipeList.appendChild(p);
           }
         }
