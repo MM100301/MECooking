@@ -23,41 +23,24 @@ order: 6
             <li>{{ tag }}</li>
           {% endfor %}
         </ul>
-      <p id="theGraph"></p>
-      <div id="recipeList"></div>
         <script>
-      function searchTags() {
-        var input, filter, tags, i, txtValue;
-        input = document.getElementById('searchInput');
-        filter = input.value.toLowerCase();
-        tags = {{ recipe_tags | jsonify }};
-        var tagList = document.getElementById("tagList");
-        var recipeList = document.getElementById("recipeList");
-        var recipeParagraph = document.getElementById("theGraph");
-        tagList.innerHTML = '';
-        recipeList.innerHTML = '';
-        for (i = 0; i < tags.length; i++) {
-          txtValue = tags[i];
-          if (txtValue.toLowerCase().indexOf(filter) > -1) {
-      var li = document.createElement('li');
-      li.textContent = txtValue;
-      tagList.appendChild(li);
-      var recipes = [];
-      {% for collection in site.collections %}
-        {% unless collection.label == "posts" %}
-          {% for recipe in site[collection.label] %}
-            if (recipe.tags.includes(txtValue)) {
-        recipes.push("{{ recipe.title }}");
+          function searchTags() {
+            var input, filter, tags, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toLowerCase();
+            tags = {{ recipe_tags | jsonify }};
+            var tagList = document.getElementById("tagList");
+            tagList.innerHTML = '';
+            for (i = 0; i < tags.length; i++) {
+              txtValue = tags[i];
+              if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                var li = document.createElement('li');
+                li.textContent = txtValue;
+                tagList.appendChild(li);
+              }
             }
-          {% endfor %}
-        {% endunless %}
-      {% endfor %}
-      recipeParagraph.textContent = "Recipes with tag '" + txtValue + "': " + recipes.join(', ');
-      recipeList.appendChild(p);
           }
-        }
-      }
-    </script>
+        </script>
     </div>
   </body>
 </html>
