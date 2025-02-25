@@ -22,7 +22,7 @@ order: 6
       <ul>
       {% for page in site.pages %}
         {% if page.tags contains tag %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          <li><a href="{{ page.url }}">{{ page.url }}</a></li>
         {% endif %}
       {% endfor %}
       </ul>
