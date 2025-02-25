@@ -17,30 +17,31 @@ order: 6
         {% endunless %}
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
-        <input type="text" id="searchInput" placeholder="Search tags" oninput="searchTags()">
+        <input type="text" id="searchInput" placeholder="Search tags" oninput="recipeSearch()">
+        <button type="submit" id="searchButton">Search</button>
         <ul id="tagList">
           {% for tag in recipe_tags %}
             <li>{{ tag }}</li>
           {% endfor %}
         </ul>
         <script>
-          function searchTags() {
-            var input, filter, tags, i, txtValue;
-            input = document.getElementById('searchInput');
-            filter = input.value.toLowerCase();
-            tags = {{ recipe_tags | jsonify }};
-            var tagList = document.getElementById("tagList");
-            tagList.innerHTML = '';
-            for (i = 0; i < tags.length; i++) {
-              txtValue = tags[i];
-              if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                var li = document.createElement('li');
-                li.textContent = txtValue;
-                tagList.appendChild(li);
-              }
+        function recipeSearch() {
+          var input, filter, tags, i, txtValue;
+          input = document.getElementById('searchInput');
+          filter = input.value.toLowerCase();
+          tags = {{ recipe_tags | jsonify }};
+          var results = [];
+          for (i = 0; i < tags.length; i++) {
+            txtValue = tags[i];
+            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+              results.push(txtValue);
             }
           }
-        </script>
+          document.getElementById('paragraph').innerHTML = 'Recipes found: ' + results.join(', ');
+        }
+        document.getElementById('searchButton').addEventListener('click', recipeSearch());
+      </script>
+      <p id="paragraph"></p>
     </div>
   </body>
 </html>
