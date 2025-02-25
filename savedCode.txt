@@ -15,7 +15,7 @@ Then it outputs a list of each tag and a link to the recipes that have it.
   <ul>
   {% for page in site.pages %}
     {% if page.tags contains tag %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      <li><a href="{{ siteurl }}{{ baseurl }}{{ page.url }}">{{ page.url }}</a></li>
     {% endif %}
   {% endfor %}
   </ul>
