@@ -28,11 +28,11 @@ order: 6
         function recipeSearch() {
               var input, filter, tags, i, txtValue;
               input = document.getElementById('searchInput');
+              paragraph = document.getElementById('paragraph').innerHTML = '';
               filter = input.value.toLowerCase();
               tags = {{ recipe_tags | jsonify }};
               var results = [];
               if (filter === "") {
-              document.getElementById('paragraph').innerHTML = '';
               return;
               }
               for (i = 0; i < tags.length; i++) {
@@ -41,8 +41,21 @@ order: 6
                 results.push(txtValue);
               }
               }
-              document.getElementById('paragraph').innerHTML = 'Recipes found: ' + results.join(', ');
-            }
+              paragraph.innerHTML = 'Recipes found: ' + results.join(', ');
+              var recipes = [];
+              results.forEach(function(tag) {
+                site.collections.forEach(function(collection) {
+                  if (collection.label !== "posts") {
+                    site[collection.label].forEach(function(recipe) {
+                      if (recipe.tags.includes(tag)) {
+                        recipes.push(recipe.title);
+                      }
+                    });
+                  }
+                });
+              });
+              paragraph.innerHTML = 'Recipes found: ' + recipes.join(', ');
+              }
             document.getElementById('searchButton').addEventListener('click', recipeSearch());     </script>
       <p id="paragraph"></p>
     </div>
