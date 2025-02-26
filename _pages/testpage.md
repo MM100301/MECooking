@@ -19,11 +19,6 @@ order: 6
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
       <input type="text" id="searchInput" placeholder="Search tags">
       <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
-      <ul id="tagList">
-        {% for tag in recipe_tags %}
-          <li>{{ tag }}</li>
-        {% endfor %}
-      </ul>
       <p id="paragraph"></p>
       <script>
         function recipeSearch() {
@@ -32,7 +27,7 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
-          var collections = [];
+          var recipes = [];
           var results = [];
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
@@ -40,13 +35,19 @@ order: 6
                 results.push(txtValue);
             }
           }
+          {% for tag in results %}
           {% for collection in site.collections %}
             {% unless collection.label == "posts" %}
-              collections.push("{{ collection.label }}");
+              {% for recipe in site[collection.label] %}
+                {% if recipe.tags contains "tag" %}
+                  recipes.push("{{ recipe.title }}");
+                {% endif %}
+              {% endfor %}
             {% endunless %}
           {% endfor %}
+          {% endfor %}
           if (filter === "") {
-              paragraph.innerText = collections.join(', ');
+              paragraph.innerText = recipes.join(', ');
               return;
           }
           paragraph.innerText = 'Recipes found: ' + results.join(', ');
