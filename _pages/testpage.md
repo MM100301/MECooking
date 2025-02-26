@@ -32,7 +32,12 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
-          collections = {{ site.collections | map: 'title' | join: ',' | split: ',' | uniq | jsonify }};
+          collections = [];
+          {% for collection in site.collections %}
+            {% unless collection.label == "posts" %}
+              collections.push("{{ collection.label }}");
+            {% endunless %}
+          {% endfor %}
           var results = [];
           if (filter === "") {
               paragraph.innerText = collections.join(', ');
