@@ -47,10 +47,10 @@ order: 6
           {% endfor %}
           {% endfor %}
           if (filter === "") {
-              paragraph.innerText = recipes.join(', ');
+              paragraph.innerText = "Nothing Found";
               return;
           }
-          paragraph.innerText = 'Recipes found: ' + results.join(', ');
+          paragraph.innerText = 'Recipes found: ' + recipes.join(', ');
         }
       </script>
     </div>
