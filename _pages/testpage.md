@@ -42,19 +42,6 @@ order: 6
               }
               }
               paragraph.innerHTML = 'Recipes found: ' + results.join(', ');
-              var recipes = [];
-              for (var i = 0; i < results.length; i++) {
-                var tag = results[i];
-                var recipeList = '<h3>Recipes With ' + tag + '</h3><ul>';
-                {% for page in site.pages %}
-                  {% if page.tags contains tag %}
-                    recipeList += '<li><a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.url }}</a></li>';
-                  {% endif %}
-                {% endfor %}
-                recipeList += '</ul>';
-                recipes.push(recipeList);
-              }
-            paragraph.innerHTML = 'Recipes found: ' + recipes.join(', ');
           }
           document.getElementById('searchButton').addEventListener('click', recipeSearch());
         </script>
