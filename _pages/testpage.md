@@ -44,13 +44,11 @@ order: 6
                 results.push(txtValue);
             }
           }
-          for (i = 0; i < results.length; i++) {
           {% for collection in site.collections %}
             {% unless collection.label == "posts" %}
               collections.push("{{ collection.label }}");
             {% endunless %}
           {% endfor %}
-          }
           paragraph.innerText = 'Recipes found: ' + results.join(', ');
         }
       </script>
