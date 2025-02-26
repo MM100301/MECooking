@@ -24,12 +24,12 @@ order: 6
           <li>{{ tag }}</li>
         {% endfor %}
       </ul>
-      <p id="paragraph">Recipes displayed here</p>
+      <p id="paragraph"></p>
       <script>
         function recipeSearch() {
         var input, filter, tags, i, txtValue;
         input = document.getElementById('searchInput');
-        paragraph = document.getElementById('paragraph').innerHTML = '';
+        paragraph = document.getElementById('paragraph');
         filter = input.value.toLowerCase();
         tags = {{ recipe_tags | jsonify }};
         var results = [];
