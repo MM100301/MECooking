@@ -41,7 +41,7 @@ order: 6
                 results.push(txtValue);
               }
               }
-              document.getElementById('paragraph').innerHTML = 'Recipes found: ' + results.join(', ');
+              paragraph.innerText = 'Recipes found: ' + results.join(', ');
             }
             document.getElementById('searchButton').addEventListener('click', recipeSearch());
         </script>
