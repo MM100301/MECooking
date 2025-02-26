@@ -42,19 +42,27 @@ order: 6
               }
               }
               paragraph.innerHTML = 'Recipes found: ' + results.join(', ');
+              javascript
               var recipes = [];
-              results.forEach(function(tag) {
-                site.collections.forEach(function(collection) {
-                  if (collection.label !== "posts") {
-                    site[collection.label].forEach(function(recipe) {
-                      if (recipe.tags.includes(tag)) {
-                        recipes.push(recipe.title);
-                      }
-                    });
-                  }
+              for (var i = 0; i < results.length; i++) {
+                recipe_tags.forEach(tag => {
+                  var tagHeader = document.createElement('h3');
+                  tagHeader.textContent = 'Recipes With ' + tag;
+                  paragraph.appendChild(tagHeader);
+                  var tagList = document.createElement('ul');
+                  site.pages.forEach(page => {
+                    if (page.tags.includes(tag)) {
+                      var listItem = document.createElement('li');
+                      var link = document.createElement('a');
+                      link.href = site.url + site.baseurl + page.url;
+                      link.textContent = page.url;
+                      listItem.appendChild(link);
+                      tagList.appendChild(listItem);
+                    }
+                  });
+                  paragraph.appendChild(tagList);
                 });
-              });
-              paragraph.innerHTML = 'Recipes found: ' + recipes.join(', ');
+                }
               }
             document.getElementById('searchButton').addEventListener('click', recipeSearch());     </script>
       <p id="paragraph"></p>
