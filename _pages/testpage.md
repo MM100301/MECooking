@@ -36,18 +36,18 @@ order: 6
             }
           }
           {% for tag in results %}
-          {% for collection in site.collections %}
-            {% unless collection.label == "posts" %}
-              {% for recipe in site[collection.label] %}
-                {% if recipe.tags contains "tag" %}
-                  recipes.push("{{ recipe.title }}");
-                {% endif %}
-              {% endfor %}
-            {% endunless %}
-          {% endfor %}
+            {% for collection in site.collections %}
+              {% unless collection.label == "posts" %}
+                {% for recipe in site[collection.label] %}
+                  {% if recipe.tags contains {{ tag }} %}
+                    recipes.push("{{ recipe.title }}");
+                  {% endif %}
+                {% endfor %}
+              {% endunless %}
+            {% endfor %}
           {% endfor %}
           if (filter === "") {
-              paragraph.innerText = "Nothing Found";
+              paragraph.innerText = "Nothing found";
               return;
           }
           paragraph.innerText = 'Recipes found: ' + recipes.join(', ');
