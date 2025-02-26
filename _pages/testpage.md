@@ -32,9 +32,10 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
+          collections = {{ site.collections | join: ',' | split: ',' | uniq | jsonify }};
           var results = [];
           if (filter === "") {
-              paragraph.innerText = '';
+              paragraph.innerText = collections.join(', ');
               return;
           }
           for (i = 0; i < tags.length; i++) {
