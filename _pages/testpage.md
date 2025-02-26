@@ -25,7 +25,7 @@ order: 6
           {% endfor %}
         </ul>
         <script>
-          function recipeSearch() {
+        function recipeSearch() {
               var input, filter, tags, i, txtValue;
               input = document.getElementById('searchInput');
               paragraph = document.getElementById('paragraph').innerHTML = '';
@@ -42,9 +42,8 @@ order: 6
               }
               }
               paragraph.innerHTML = 'Recipes found: ' + results.join(', ');
-          }
-          document.getElementById('searchButton').addEventListener('click', recipeSearch());
-        </script>
+            }
+            document.getElementById('searchButton').addEventListener('click', recipeSearch());     </script>
       <p id="paragraph"></p>
     </div>
   </body>
