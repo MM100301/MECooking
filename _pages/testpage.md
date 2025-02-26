@@ -17,35 +17,36 @@ order: 6
         {% endunless %}
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
-      <input type="text" id="searchInput" placeholder="Search tags" oninput="recipeSearc()">
-      <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
-      <ul id="tagList">
-        {% for tag in recipe_tags %}
-          <li>{{ tag }}</li>
-        {% endfor %}
-      </ul>
-      <script>
+        <input type="text" id="searchInput" placeholder="Search tags" oninput="recipeSearch()">
+        <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
+        <ul id="tagList">
+          {% for tag in recipe_tags %}
+            <li>{{ tag }}</li>
+          {% endfor %}
+        </ul>
+        <script>
         function recipeSearch() {
-        var input, filter, tags, i, txtValue;
-        input = document.getElementById('searchInput');
-        paragraph = document.getElementById('paragraph').innerHTML = '';
-        filter = input.value.toLowerCase();
-        tags = {{ recipe_tags | jsonify }};
-        collections = {{ site.collections | jsonify }};
-        var results = [];
-        if (filter === "") {
-        return;
-        }
-        for (i = 0; i < tags.length; i++) {
-        txtValue = tags[i];
-        if (txtValue.toLowerCase().indexOf(filter) > -1) {
-          results.push(txtValue);
-        }
-        }
-        paragraph.innerText = 'Recipes found: ' + results.join(', ');
-        }
-        document.getElementById('searchButton').addEventListener('click', recipeSearc());
-      </script>
+              var input, filter, tags, i, txtValue;
+              input = document.getElementById('searchInput');
+              paragraph = document.getElementById('paragraph').innerHTML = '';
+              filter = input.value.toLowerCase();
+              tags = {{ recipe_tags | jsonify }};
+              collections = {{ site.collections | jsonify }};
+              var results = [];
+              if (filter === "") {
+              return;
+              }
+              for (i = 0; i < tags.length; i++) {
+              txtValue = tags[i];
+              if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                results.push(txtValue);
+              }
+              }
+              paragraph.innerText = 'Recipes found: ' + results.join(', ');
+            }
+            document.getElementById('searchButton').addEventListener('click', recipeSearch());
+        </script>
+      <p id="paragraph"></p>
     </div>
   </body>
 </html>
