@@ -25,7 +25,8 @@ order: 6
           {% endfor %}
         </ul>
         <script>
-        function recipeSearch() {
+          document.addEventListener('DOMContentLoaded', function() {
+            function recipeSearch() {
               var input, filter, tags, i, txtValue;
               input = document.getElementById('searchInput');
               paragraph = document.getElementById('paragraph').innerHTML = '';
@@ -33,18 +34,20 @@ order: 6
               tags = {{ recipe_tags | jsonify }};
               var results = [];
               if (filter === "") {
-              return;
+                return;
               }
               for (i = 0; i < tags.length; i++) {
-              txtValue = tags[i];
-              if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                results.push(txtValue);
-              }
+                txtValue = tags[i];
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                  results.push(txtValue);
+                }
               }
               paragraph.innerHTML = 'Recipes found: ' + results.join(', ');
             }
-            document.getElementById('searchButton').addEventListener('click', recipeSearch());     </script>
-      <p id="paragraph"></p>
+            document.getElementById('searchButton').addEventListener('click', recipeSearch);
+          });
+        </script>
+        <p id="paragraph"></p>
     </div>
   </body>
 </html>
