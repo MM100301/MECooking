@@ -32,7 +32,8 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
-          collections = [];
+          var collections = [];
+          var results = [];
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
@@ -44,7 +45,6 @@ order: 6
               collections.push("{{ collection.label }}");
             {% endunless %}
           {% endfor %}
-          var results = [];
           if (filter === "") {
               paragraph.innerText = collections.join(', ');
               return;
