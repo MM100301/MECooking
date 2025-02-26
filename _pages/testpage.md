@@ -24,7 +24,7 @@ order: 6
           <li>{{ tag }}</li>
         {% endfor %}
       </ul>
-      <p id="paragraph"></p>
+      <p id="paragraph">Recipes displayed here</p>
       <script>
         function recipeSearch() {
         var input, filter, tags, i, txtValue;
