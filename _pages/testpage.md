@@ -17,7 +17,7 @@ order: 6
         {% endunless %}
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
-      <input type="text" id="searchInput" placeholder="Search tags" oninput="recipeSearch()">
+      <input type="text" id="searchInput" placeholder="Search tags">
       <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
       <ul id="tagList">
         {% for tag in recipe_tags %}
@@ -45,7 +45,7 @@ order: 6
           }
           paragraph.innerText = 'Recipes found: ' + results.join(', ');
         }
-        document.getElementById('searchButton').addEventListener('click', recipeSearch);     </script>
+      </script>
     </div>
   </body>
 </html>
