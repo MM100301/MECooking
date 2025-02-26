@@ -33,11 +33,6 @@ order: 6
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
           collections = [];
-          {% for collection in site.collections %}
-            {% unless collection.label == "posts" %}
-              collections.push("{{ collection.label }}");
-            {% endunless %}
-          {% endfor %}
           var results = [];
           if (filter === "") {
               paragraph.innerText = collections.join(', ');
@@ -48,6 +43,13 @@ order: 6
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
                 results.push(txtValue);
             }
+          }
+          for (i = 0; i < results.length; i++) {
+          {% for collection in site.collections %}
+            {% unless collection.label == "posts" %}
+              collections.push("{{ collection.label }}");
+            {% endunless %}
+          {% endfor %}
           }
           paragraph.innerText = 'Recipes found: ' + results.join(', ');
         }
