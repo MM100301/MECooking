@@ -25,7 +25,7 @@ order: 6
           {% endfor %}
         </ul>
         <script>
-        function recipeSearch() {
+          function recipeSearch() {
               var input, filter, tags, i, txtValue;
               input = document.getElementById('searchInput');
               paragraph = document.getElementById('paragraph').innerHTML = '';
@@ -42,29 +42,24 @@ order: 6
               }
               }
               paragraph.innerHTML = 'Recipes found: ' + results.join(', ');
-              javascript
               var recipes = [];
               for (var i = 0; i < results.length; i++) {
-                recipe_tags.forEach(tag => {
-                  var tagHeader = document.createElement('h3');
-                  tagHeader.textContent = 'Recipes With ' + tag;
-                  paragraph.appendChild(tagHeader);
-                  var tagList = document.createElement('ul');
-                  site.pages.forEach(page => {
-                    if (page.tags.includes(tag)) {
-                      var listItem = document.createElement('li');
-                      var link = document.createElement('a');
-                      link.href = site.url + site.baseurl + page.url;
-                      link.textContent = page.url;
-                      listItem.appendChild(link);
-                      tagList.appendChild(listItem);
-                    }
-                  });
-                  paragraph.appendChild(tagList);
-                });
-                }
+                var tag = results[i];
+                var recipeList = '<h3>Recipes With ' + tag + '</h3><ul>';
+                {% for page in site.pages %}
+                  {% if page.tags contains tag %}
+                    recipeList += '<li><a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.url }}</a></li>';
+                  {% endif %}
+                {% endfor %}
+                recipeList += '</ul>';
+                recipes.push(recipeList);
               }
-            document.getElementById('searchButton').addEventListener('click', recipeSearch());     </script>
+              paragraph.innerHTML = 'Recipes found: ' + recipes.join(', ');
+              }
+              paragraph.innerHTML = 'Recipes found: ' + recipes.join(', ');
+          }
+          document.getElementById('searchButton').addEventListener('click', recipeSearch());
+        </script>
       <p id="paragraph"></p>
     </div>
   </body>
