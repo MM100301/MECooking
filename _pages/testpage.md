@@ -32,7 +32,7 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
-          collections = {{ site.collections | join: ',' | split: ',' | uniq | jsonify }};
+          collections = {{ site.collections | map: 'url' | join: ',' | split: ',' | uniq | jsonify }};
           var results = [];
           if (filter === "") {
               paragraph.innerText = collections.join(', ');
