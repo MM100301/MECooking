@@ -54,9 +54,7 @@ order: 6
                 recipeList += '</ul>';
                 recipes.push(recipeList);
               }
-              paragraph.innerHTML = 'Recipes found: ' + recipes.join(', ');
-              }
-              paragraph.innerHTML = 'Recipes found: ' + recipes.join(', ');
+            paragraph.innerHTML = 'Recipes found: ' + recipes.join(', ');
           }
           document.getElementById('searchButton').addEventListener('click', recipeSearch());
         </script>
