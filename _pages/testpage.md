@@ -27,25 +27,25 @@ order: 6
       <p id="paragraph"></p>
       <script>
         function recipeSearch() {
-        var input, filter, tags, i, txtValue;
-        input = document.getElementById('searchInput');
-        paragraph = document.getElementById('paragraph');
-        filter = input.value.toLowerCase();
-        tags = {{ recipe_tags | jsonify }};
-        var results = [];
-        if (filter === "") {
-        return;
-        }
-        for (i = 0; i < tags.length; i++) {
-          txtValue = tags[i];
-            if (txtValue.toLowerCase().indexOf(filter) > -1) {
-              results.push(txtValue);
+          var input, filter, tags, i, txtValue;
+          input = document.getElementById('searchInput');
+          paragraph = document.getElementById('paragraph');
+          filter = input.value.toLowerCase();
+          tags = {{ recipe_tags | jsonify }};
+          var results = [];
+          if (filter === "") {
+              paragraph.innerText = '';
+              return;
           }
+          for (i = 0; i < tags.length; i++) {
+            txtValue = tags[i];
+              if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                results.push(txtValue);
+            }
+          }
+          paragraph.innerText = 'Recipes found: ' + results.join(', ');
         }
-        paragraph.innerText = 'Recipes found: ' + results.join(', ');
-        }
-        document.getElementById('searchButton').addEventListener('click', recipeSearch());
-      </script>
+        document.getElementById('searchButton').addEventListener('click', recipeSearch);     </script>
     </div>
   </body>
 </html>
