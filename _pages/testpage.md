@@ -24,6 +24,7 @@ order: 6
             <li>{{ tag }}</li>
           {% endfor %}
         </ul>
+        <p id="paragraph"></p>
         <script>
         function recipeSearch() {
               var input, filter, tags, i, txtValue;
@@ -31,6 +32,7 @@ order: 6
               paragraph = document.getElementById('paragraph').innerHTML = '';
               filter = input.value.toLowerCase();
               tags = {{ recipe_tags | jsonify }};
+              collections = {{ site.collections | jsonify }};
               var results = [];
               if (filter === "") {
               return;
@@ -45,7 +47,6 @@ order: 6
             }
             document.getElementById('searchButton').addEventListener('click', recipeSearch());
         </script>
-      <p id="paragraph"></p>
     </div>
   </body>
 </html>
