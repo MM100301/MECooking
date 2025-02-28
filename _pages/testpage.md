@@ -36,13 +36,19 @@ order: 6
             }
           }
           {% for tag in results %}
-            recipes.push(tag);
+            {% for collection in site.collections %}
+              {% unless collection.label == "posts" %}
+                {% for recipe in site[collection.label] %}
+                  recipes.push({{ recipe.title %})
+                {% endfor %}
+              {% endunless %}
+            {% endfor %}
           {% endfor %}
           if (filter === "") {
               paragraph.innerText = "Nothing found";
               return;
           }
-          paragraph.innerText = 'Recipes found: ' + results.join(', ');
+          paragraph.innerText = 'Recipes found: ' + recipes.join(', ');
         }
       </script>
     </div>
