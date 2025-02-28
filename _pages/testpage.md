@@ -35,9 +35,18 @@ order: 6
                 results.push(txtValue);
             }
           }
-          {% for tag in results %}
-            recipes.push(tag);
-          {% endfor %}
+          for (var j = 0; j < results.length; j++) {
+            var tag = results[j];
+            site.collections.forEach(function(collection) {
+              if (collection.label !== "posts") {
+                site[collection.label].forEach(function(recipe) {
+                  if (recipe.tags.includes(tag)) {
+                    recipes.push(recipe.title);
+                  }
+                });
+              }
+            });
+          }
           if (filter === "") {
               paragraph.innerText = "Nothing found";
               return;
