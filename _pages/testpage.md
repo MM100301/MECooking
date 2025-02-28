@@ -39,7 +39,7 @@ order: 6
             {% for collection in site.collections %}
               {% unless collection.label == "posts" %}
                 {% for recipe in site[collection.label] %}
-                  recipes.push({{ recipe.title }})
+                  recipes.push(recipe.title)
                 {% endfor %}
               {% endunless %}
             {% endfor %}
