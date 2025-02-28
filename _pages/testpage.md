@@ -42,7 +42,7 @@ order: 6
               paragraph.innerText = "Nothing found";
               return;
           }
-          paragraph.innerText = 'Recipes found: ' + recipes.join(', ');
+          paragraph.innerText = 'Recipes found: ' + results.join(', ');
         }
       </script>
     </div>
