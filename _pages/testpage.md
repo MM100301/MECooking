@@ -36,7 +36,7 @@ order: 6
             }
           }
           {% for tag in results %}
-            recipes.push(tag)
+            recipes.push(tag);
           {% endfor %}
           if (filter === "") {
               paragraph.innerText = "Nothing found";
