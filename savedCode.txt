@@ -20,3 +20,23 @@ Then it outputs a list of each tag and a link to the recipes that have it.
   {% endfor %}
   </ul>
 {% endfor %}
+
+
+
+
+
+
+Deep loop trying to find recipes with tags
+Used in testpage.md
+NOT WORKING
+{% for tag in results %}
+            {% for collection in site.collections %}
+              {% unless collection.label == "posts" %}
+                {% for recipe in site[collection.label] %}
+                  {% if recipe.tags contains tag %}
+                    recipes.push("recipefound");
+                  {% endif %}
+                {% endfor %}
+              {% endunless %}
+            {% endfor %}
+          {% endfor %}
