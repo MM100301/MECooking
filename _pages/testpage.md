@@ -39,8 +39,8 @@ order: 6
             {% for collection in site.collections %}
               {% unless collection.label == "posts" %}
                 {% for recipe in site[collection.label] %}
-                  {% if recipe.tags contains "{{ tag }}" %}
-                    recipes.push("{{ recipe.title }}");
+                  {% if recipe.tags contains tag %}
+                    recipes.push("recipefound");
                   {% endif %}
                 {% endfor %}
               {% endunless %}
