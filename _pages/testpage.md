@@ -27,20 +27,11 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
-          collections = [];
           var recipes = [];
           var results = [];
-          var siteCollections = {{ site.collections | jsonify }};
-          console.log(siteCollections);
-          for (var i = 0; i < siteCollections.length; i++) {
-            collections.push(siteCollections[i].label);
-            var collectionRecipes = siteCollections[i].docs;
-            for (var j = 0; j < collectionRecipes.length; j++) {
-              recipes.push(collectionRecipes[j].title);
-            }
-          }
-          for (i = 0; i < siteCollections.length; i++) {
-            siteCollections[i] = recipes.join(', ');
+          var collections = {{ site.collections | map: "label" | jsonify }};
+          for (i = 0; i < collections.length; i++) {
+            collections[i] = recipes.join(', ');
           }
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
