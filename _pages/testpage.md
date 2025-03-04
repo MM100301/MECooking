@@ -22,17 +22,18 @@ order: 6
       <p id="paragraph"></p>
       <script>
         function recipeSearch() {
-          var input, filter, tags, i, txtValue, collections;
+          var input, filter, tags, i, txtValue;
           input = document.getElementById('searchInput');
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
           collections = [];
-          for (var collection in site.collections) {
-            collections.push(collection.label);
-          }
           var recipes = [];
           var results = [];
+          var siteCollections = {{ site.collections | jsonify }};
+          for (var i = 0; i < siteCollections.length; i++) {
+            collections.push(siteCollections[i].label);
+          }
           for (i = 0; i < collections.length; i++) {
             collections[i] = recipes.join(', ');
           }
