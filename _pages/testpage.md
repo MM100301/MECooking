@@ -27,9 +27,12 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
+          collections = {{ site.collections | jsonify }};
           var recipes = [];
           var results = [];
-          collections = {{ site.collections.label | jsonify }};
+          for (i = 0; i < collections.length; i++) {
+            collections[i].title = recipes.join(', ');
+          }
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
@@ -40,7 +43,7 @@ order: 6
               paragraph.innerText = "Nothing found";
               return;
           }
-          paragraph.innerText = 'Recipes found: ' + results.join(', ');
+          paragraph.innerText = 'Recipes found: ' + recipes.join(', ');
         }
       </script>
     </div>
