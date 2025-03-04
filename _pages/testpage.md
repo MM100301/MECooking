@@ -17,6 +17,22 @@ order: 6
         {% endunless %}
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
+      {% assign results = "" | split: ',' %}
+      {% for tag in results %}
+        {% for collection in site.collections %}
+          {% unless collection.label == "posts" %}
+            {% for recipe in site[collection.label] %}
+              {% if recipe.tags contains tag %}
+                {% assign results = results | push: recipe.title %}
+              {% endif %}
+            {% endfor %}
+          {% endunless %}
+        {% endfor %}
+      {% endfor %}
+      {% assign results_json = results | jsonify %}
+      {% file '../_data/recipes.json' %}
+      {{ results_json }}
+      {% endfile %}
       <input type="text" id="searchInput" placeholder="Search tags">
       <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
       <p id="paragraph"></p>
@@ -30,13 +46,6 @@ order: 6
           collections = [];
           var recipes = [];
           var results = [];
-          var siteCollections = {{ site.collections | jsonify }};
-          for (var i = 0; i < siteCollections.length; i++) {
-            collections.push(siteCollections[i].label);
-          }
-          for (i = 0; i < siteCollections.length; i++) {
-            siteCollections[i] = recipes.join(', ');
-          }
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
