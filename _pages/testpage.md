@@ -27,7 +27,6 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
-          collections = {{ site.collections | jsonify }}.filter(collection => collection.label !== "posts");
           var recipes = [];
           var results = [];
           for (i = 0; i < tags.length; i++) {
