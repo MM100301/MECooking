@@ -30,9 +30,6 @@ order: 6
           collections = {{ site.collections | jsonify }}.filter(collection => collection.label !== "posts");
           var recipes = [];
           var results = [];
-          for (i = 0; i < collections.length; i++) {
-            collections[i].title = recipes.join(', ');
-          }
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
