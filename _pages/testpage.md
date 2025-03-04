@@ -31,7 +31,7 @@ order: 6
           var recipes = [];
           var results = [];
           for (i = 0; i < collections.length; i++) {
-            collections[i] = recipes.join(', ');
+            collections[i].title = recipes.join(', ');
           }
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
