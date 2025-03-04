@@ -34,8 +34,8 @@ order: 6
           for (var i = 0; i < siteCollections.length; i++) {
             collections.push(siteCollections[i].label);
           }
-          for (i = 0; i < collections.length; i++) {
-            collections[i] = recipes.join(', ');
+          for (i = 0; i < siteCollections.length; i++) {
+            siteCollections[i] = recipes.join(', ');
           }
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
