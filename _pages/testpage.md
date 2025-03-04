@@ -22,30 +22,22 @@ order: 6
       <p id="paragraph"></p>
       <script>
         function recipeSearch() {
-          var input, filter, tags, i, txtValue;
+          var input, filter, tags, i, txtValue, collections;
           input = document.getElementById('searchInput');
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
+          collections = {{ site.collections | jsonify }}.filter(collection => collection.label !== "posts");
           var recipes = [];
           var results = [];
+          for (i = 0; i < collections.length; i++) {
+            collections[i] = recipes.join(', ');
+          }
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
                 results.push(txtValue);
             }
-          }
-          for (var j = 0; j < results.length; j++) {
-            var tag = results[j];
-            site.collections.forEach(function(collection) {
-              if (collection.label !== "posts") {
-                site[collection.label].forEach(function(recipe) {
-                  if (recipe.tags.includes(tag)) {
-                    recipes.push(recipe.title);
-                  }
-                });
-              }
-            });
           }
           if (filter === "") {
               paragraph.innerText = "Nothing found";
