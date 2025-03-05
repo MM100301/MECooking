@@ -6,7 +6,7 @@
     {% unless collection.label == "posts" %}
       {% for recipe in site[collection.label] %}
         {
-          "label"    : "{{ recipe.label }}",
+          "title"    : "{{ recipe.title }}",
           "url"      : "{{ site.baseurl }}{{ recipe.url }}",
           "tags"     : "{{ recipe.tags | join: ', ' }}"
         }
