@@ -30,10 +30,10 @@ order: 6
           var recipes = [];
           var results = [];
           var directories = {{ site.collections | map: "directory" | jsonify }};
-          var collections = {{ site.collections | map: "label" | jsonify }};
+          var collections = {{ site.collections | map: "label" | where: "label", "item.label not contains 'posts'" | jsonify }};
           for (i = 0; i < collections.length; i++) {
             collection = collections[i];
-            var collectionRecipes = {{ site[collection] | jsonify }};
+            var collectionRecipes = {{ site.collection | jsonify }};
             for (var j = 0; j < collectionRecipes.length; j++) {
               recipes.push(collectionRecipes[j]);
             }
