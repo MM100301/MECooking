@@ -17,6 +17,14 @@ order: 6
         {% endunless %}
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
+      {% for collection in site.collections %}
+        {% unless collection.label == "posts" %}
+          {% for recipe in site[collection.label] %}
+            {% assign recipestags = recipestags | concat: recipe.title | append: ": " | append: recipe.tags | append: ", " %}
+          {% endfor %}
+        {% endunless %}
+      {% endfor %}
+      {% assign recipestags = recipestags | split: ', ' | uniq %}
       <input type="text" id="searchInput" placeholder="Search tags">
       <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
       <p id="paragraph"></p>
@@ -27,7 +35,7 @@ order: 6
             paragraph = document.getElementById('paragraph');
             filter = input.value.toLowerCase();
             tags = {{ recipe_tags | jsonify }};
-            var recipes = [];
+            var recipes = {{ recipestags | jsonify}};
             var results = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
@@ -41,7 +49,7 @@ order: 6
               paragraph.innerText = "Nothing found";
               return;
             }
-            paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
+            paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ') + 'Recipes: ' + recipes.join(', ');
           }
         </script>
     </div>
