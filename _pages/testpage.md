@@ -8,20 +8,11 @@ order: 6
 <html>
   <body>
     <div>
-      {% assign recipe_tags = "" | split: ',' %}
-      {% for collection in site.collections %}
-        {% unless collection.label == "posts" %}
-            {% for recipe in site[collection.label] %}
-              {% assign recipe_tags = recipe_tags | concat:recipe.tags %}
-            {% endfor %}
-        {% endunless %}
-      {% endfor %}
-      {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
-      {% assign recipestags = "" | split: ',' %}
+      {% assign recipestags = "" | split: ','%}
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
           {% for recipe in site[collection.label] %}
-            {% assign recipestags = recipestags | concat: recipe.title | append: ": " | append: recipe.tags | append: ", " %}
+            {% assign recipestags = recipestags | concat: recipe.title | append: ": " | concat: recipe.tags | append: ", " %}
           {% endfor %}
         {% endunless %}
       {% endfor %}
@@ -35,7 +26,7 @@ order: 6
             input = document.getElementById('searchInput');
             paragraph = document.getElementById('paragraph');
             filter = input.value.toLowerCase();
-            tags = {{ recipe_tags | jsonify }};
+            tags = {{ recipestags | jsonify }};
             var recipes = {{ recipestags | jsonify}};
             var results = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
