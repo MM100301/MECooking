@@ -18,6 +18,7 @@ order: 6
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
       <input type="text" id="searchInput" placeholder="Search tags">
+      <script src="{{ site.url }}/{{ site.baseurl }}/_data/recipes.json"></script>
       <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
       <p id="paragraph"></p>
       <script>
