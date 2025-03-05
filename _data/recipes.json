@@ -3,10 +3,10 @@
 
 [
   {% for collection in site.collections %}
-    {% unless collection.label == 'posts' %}
+    {% unless collection.label == "posts" %}
       {% for recipe in site[collection.label] %}
         {
-          "title"    : "{{ recipe.title }}",
+          "label"    : "{{ recipe.label }}",
           "url"      : "{{ site.baseurl }}{{ recipe.url }}",
           "tags"     : "{{ recipe.tags | join: ', ' }}"
         }
