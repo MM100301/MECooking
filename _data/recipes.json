@@ -1,3 +1,0 @@
-{
-  "collections": "{{ site.collections | map: 'label' | jsonify }}"
-}
