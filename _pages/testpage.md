@@ -31,11 +31,14 @@ order: 6
           var results = [];
           var directories = {{ site.collections | map: "directory" | jsonify }};
           var collections = {{ site.collections | map: "label" | jsonify }};
-          for (i = 0; i < collections.length; i++) {
-            col = collections[i];
-            var collectionRecipes = {{ site[col] | jsonify }};
-            for (var j = 0; j < collectionRecipes.length; j++) {
-              recipes.push(collectionRecipes[j]);
+          for (var j = 0; j < collections.length; j++) {
+            var collection = collections[j];
+            var directory = directories[j];
+            for (var k = 0; k < site[collection].length; k++) {
+              var recipe = site[collection][k];
+              if (recipe.tags.some(tag => tag.toLowerCase().includes(filter))) {
+                recipes.push(recipe.title);
+              }
             }
           }
           for (i = 0; i < tags.length; i++) {
