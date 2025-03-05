@@ -29,7 +29,7 @@ order: 6
           tags = {{ recipe_tags | jsonify }};
           var recipes = [];
           var results = [];
-          var collections = {{ site.collections | reject: "label", "posts" | map: "label" | jsonify }};
+          var collections = {{ site.collections reject: "label", "posts" | jsonify }};
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
