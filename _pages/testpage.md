@@ -21,7 +21,6 @@ order: 6
       <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
       <p id="paragraph"></p>
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
           function recipeSearch() {
             var input, filter, tags, i, txtValue;
             input = document.getElementById('searchInput');
@@ -30,7 +29,7 @@ order: 6
             tags = {{ recipe_tags | jsonify }};
             var recipes = [];
             var results = [];
-            test = {{ site[Beef] | jsonify}};
+            var test = {{ site[Beef] | jsonify}};
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
             for (var j = 0; j < collections.length; j++) {
@@ -48,7 +47,6 @@ order: 6
             }
             paragraph.innerText = 'Recipes: ' + recipes.join(', ') + test.join(', ');
           }
-        });
         </script>
     </div>
   </body>
