@@ -33,7 +33,7 @@ order: 6
             var collections = {{ site.collections | map: "label" | jsonify }};
             for (var i = 0; i < collections.length; i++) {
               collection = collections[i];
-              collectionData = {{ site.Beef | jsonify}};
+              collectionData = {{ site.collections[collection] | jsonify }};
               recipes.push(collectionData);
             }
             for (i = 0; i < tags.length; i++) {
