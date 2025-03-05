@@ -31,8 +31,10 @@ order: 6
             var results = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
-            for (var j = 0; j < collections.length; j++) {
-              recipes.push(j);
+            for (var i = 0; i < collections.length; i++) {
+              collection = collections[i];
+              collectionData = {{ site.Beef | jsonify}};
+              recipes.push(collectionData);
             }
             for (i = 0; i < tags.length; i++) {
               txtValue = tags[i];
