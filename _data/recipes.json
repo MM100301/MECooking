@@ -1,0 +1,12 @@
+---
+---
+
+[
+  {% for collection in site.collections %}
+    {
+      "title"    : "{{ post.title }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "tags"     : "{{ post.tags | join: ', ' }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

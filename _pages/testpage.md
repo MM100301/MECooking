@@ -8,15 +8,15 @@ order: 6
 <html>
   <body>
     <div>
-      {% assign recipestags = "" | split: ','%}
+      {% assign recipe_tags = "" | split: ',' %}
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
-          {% for recipe in site[collection.label] %}
-            {% assign recipestags = recipestags | concat: recipe.title | append: ": " | concat: recipe.tags | append: ", " %}
-          {% endfor %}
+            {% for recipe in site[collection.label] %}
+              {% assign recipe_tags = recipe_tags | concat:recipe.tags %}
+            {% endfor %}
         {% endunless %}
       {% endfor %}
-      {% assign recipestags = recipestags | split: ', ' | uniq %}
+      {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
       <input type="text" id="searchInput" placeholder="Search tags">
       <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
       <p id="paragraph"></p>
@@ -26,8 +26,8 @@ order: 6
             input = document.getElementById('searchInput');
             paragraph = document.getElementById('paragraph');
             filter = input.value.toLowerCase();
-            tags = {{ recipestags | jsonify }};
-            var recipes = {{ recipestags | jsonify}};
+            tags = {{ recipe_tags | jsonify }};
+            var recipes = [];
             var results = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
@@ -41,7 +41,7 @@ order: 6
               paragraph.innerText = "Nothing found";
               return;
             }
-            paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ') + 'Recipes: ' + recipes.join(', ');
+            paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
           }
         </script>
     </div>
