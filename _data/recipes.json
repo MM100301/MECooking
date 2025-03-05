@@ -4,11 +4,11 @@
 [
   {% for collection in site.collections %}
     {% unless collection.label == 'posts' %}
-      {% for recipe in collection %}
+      {% for recipe in site[collection.label] %}
         {
-          "title"    : "{{ post.title }}",
-          "url"      : "{{ site.baseurl }}{{ post.url }}",
-          "tags"     : "{{ post.tags | join: ', ' }}"
+          "title"    : "{{ recipe.title }}",
+          "url"      : "{{ site.baseurl }}{{ recipe.url }}",
+          "tags"     : "{{ recipe.tags | join: ', ' }}"
         }
       {% endfor %}
     {% endunless %}
