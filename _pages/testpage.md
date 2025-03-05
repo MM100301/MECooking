@@ -8,15 +8,6 @@ order: 6
 <html>
   <body>
     <div>
-      {% assign recipe_tags = "" | split: ',' %}
-      {% for collection in site.collections %}
-        {% unless collection.label == "posts" %}
-            {% for recipe in site[collection.label] %}
-              {% assign recipe_tags = recipe_tags | concat:recipe.tags %}
-            {% endfor %}
-        {% endunless %}
-      {% endfor %}
-      {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
           {% for recipe in site[collection.label] %}
