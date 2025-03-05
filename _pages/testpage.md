@@ -33,8 +33,10 @@ order: 6
           var collections = {{ site.collections | map: "label" | jsonify }};
           for (i = 0; i < collections.length; i++) {
             collection = collections[i];
-            var collectionRecipes = {{ site[collection] | map: "directory" | jsonify }};
-            recipes.push(collectionRecipes);
+            var collectionRecipes = {{ site[collection] | map: "title" | jsonify }};
+            for (var j = 0; j < collectionRecipes.length; j++) {
+              recipes.push(collectionRecipes[j]);
+            }
           }
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
