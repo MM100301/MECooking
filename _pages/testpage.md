@@ -29,9 +29,14 @@ order: 6
           tags = {{ recipe_tags | jsonify }};
           var recipes = [];
           var results = [];
-          var directories = {{ site.collections | map: "path" | jsonify }};
+          var directories = {{ site.collections | map: "directory" | jsonify }};
           var collections = {{ site.collections | map: "label" | jsonify }};
-                  for (i = 0; i < tags.length; i++) {
+          for (i = 0; i < collections.length; i++) {
+            collection = collections[i];
+            recipe = {{ site[collection] | map: "title" | jsonify}};
+            recipes.push(recipe);
+          }
+          for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
                 results.push(txtValue);
@@ -41,7 +46,7 @@ order: 6
               paragraph.innerText = "Nothing found";
               return;
           }
-          paragraph.innerText = 'Recipes found: ' + collections.join(', ') + directories.join(',');
+          paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(',') + 'Recipes: ' + recipes.join(', ');
         }
       </script>
     </div>
