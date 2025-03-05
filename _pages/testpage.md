@@ -44,7 +44,7 @@ order: 6
               paragraph.innerText = "Nothing found";
               return;
             }
-            paragraph.innerText = 'Recipes: ' + recipes.join(', ') + test.join(', ');
+            paragraph.innerText = 'Recipes: ' + recipes.join(', ');
           }
         </script>
     </div>
