@@ -29,8 +29,8 @@ order: 6
           tags = {{ recipe_tags | jsonify }};
           var recipes = [];
           var results = [];
-          var directories = {{ site.collections | map: "directory" | jsonify }};
-          var collections = {{ site.collections | reject: "label", "posts" | map: "label" | jsonify }};
+          var directories = {{ site.collections | map: "path" | jsonify }};
+          var collections = {{ site.collections | map: "label" | jsonify }};
                   for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
@@ -41,7 +41,7 @@ order: 6
               paragraph.innerText = "Nothing found";
               return;
           }
-          paragraph.innerText = 'Recipes found: ' + collections.join(', ');
+          paragraph.innerText = 'Recipes found: ' + collections.join(', ') + directories.join(',');
         }
       </script>
     </div>
