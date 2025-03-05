@@ -30,7 +30,7 @@ order: 6
             var recipes = [];
             var results = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
-            var collections = {{ site.recipetags | jsonify }};
+            var collections = {{ site.collections | map: "label"}};
             for (i = 0; i < tags.length; i++) {
               txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
@@ -41,7 +41,7 @@ order: 6
               paragraph.innerText = "Nothing found";
               return;
             }
-            paragraph.innerText = 'Recipes: ' + collections.join(', ');
+            paragraph.innerText = 'Recipes: ' + recipes.join(', ');
           }
         </script>
     </div>
