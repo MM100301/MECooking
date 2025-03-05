@@ -34,10 +34,6 @@ order: 6
           for (i = 0; i < collections.length; i++) {
             collection = collections[i];
             var collectionRecipes = site[collection];
-            for (var j = 0; j < collectionRecipes.length; j++) {
-              recipe = collectionRecipes[j];
-              recipes.push(recipe.title);
-            }
           }
           for (i = 0; i < tags.length; i++) {
             txtValue = tags[i];
