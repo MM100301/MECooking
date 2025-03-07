@@ -31,7 +31,7 @@ order: 6
             var recipes = [];
             var results = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
-            var collections = {{ site.collections | map: "label" | jsonify }};
+            var collections = {{ site.data }};
             for (i = 0; i < tags.length; i++) {
               txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
