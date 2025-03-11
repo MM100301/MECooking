@@ -47,7 +47,7 @@ order: 6
               }
             }
             if (filter === "") {
-              paragraph.innerText = "Nothing found";
+              paragraph.innerText = printable.join(', ');
               return;
             }
             paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
