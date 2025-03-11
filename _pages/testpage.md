@@ -33,9 +33,9 @@ order: 6
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
             fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
-              .then(response => response.json())
-              .then(data => {
-                printable = data;
+              .then(function(response) {return response.json(); })
+              .then(json => {
+                printable = json;
                 console.log(printable);
               })
               .catch(error => {
