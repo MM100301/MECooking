@@ -33,10 +33,8 @@ order: 6
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
             fetch("{{ site.url }}/{{ site.baseurl }}/_data/recipes.json")
-              .then(data => {
-                printable = data;
-                console.log(printable);
-              })
+              .then(response => response.json())
+              .then(console.log(response))
               .catch(error => console.error('Error fetching recipes:', error));
               for (i = 0; i < tags.length; i++) {
               txtValue = tags[i];
