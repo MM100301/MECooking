@@ -32,16 +32,10 @@ order: 6
             var printable = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
-            fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
-              .then(function(response) {return response.json(); })
-              .then(json => {
-                printable = json;
-                console.log(printable);
-              })
-              .catch(error => {
-                console.error(`Error fetching recipes: ${error}`);
-              });
-              for (i = 0; i < tags.length; i++) {
+            const response = await fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json");
+            const data = await response.json();
+            console.log(data);
+            for (i = 0; i < tags.length; i++) {
               txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
                 results.push(txtValue);
