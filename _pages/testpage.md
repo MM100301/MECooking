@@ -33,12 +33,6 @@ order: 6
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
             fetch("{{ site.url }}/{{ site.baseurl }}/_data/recipes.json")
-              .then(response => {
-                if (!response.ok) {
-                  throw new Error("Error fetching recipes: ${response.status});``
-                }
-                return response.json();
-              })
               .then(data => {
                 console.log(data);
               })
