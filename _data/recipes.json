@@ -7,7 +7,7 @@
       {% for recipe in site[collection.label] %}
         {
           "title"    : "{{ recipe.title }}",
-          "url"      : "{{ site.baseurl }}{{ recipe.url }}",
+          "url"      : "{{ recipe.url }}",
           "tags"     : "{{ recipe.tags | join: ', ' }}"
         }
       {% endfor %}
