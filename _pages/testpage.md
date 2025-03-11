@@ -18,7 +18,6 @@ order: 6
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
       <input type="text" id="searchInput" placeholder="Search tags">
-      <script src="{{ site.url }}/{{ site.baseurl }}/_data/recipes.json"></script>
       <button type="submit" onclick="recipeSearch()" id="searchButton">Search</button>
       <p id="paragraph"></p>
       <script>
@@ -28,14 +27,12 @@ order: 6
             paragraph = document.getElementById('paragraph');
             filter = input.value.toLowerCase();
             tags = {{ recipe_tags | jsonify }};
-            console.log("HAHAHAHAH");
             var recipes = [];
             var results = [];
             var printable = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
             fetch("{{ site.url }}/{{ site.baseurl }}/_data/recipes.json")
-              .then(response => response.json())
               .then(data => {
                 printable = data;
                 console.log(printable);
@@ -48,7 +45,7 @@ order: 6
               }
             }
             if (filter === "") {
-              paragraph.innerText = printable.join(', ');
+              paragraph.innerText = "nothing found";
               return;
             }
             paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
