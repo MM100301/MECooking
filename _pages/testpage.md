@@ -36,7 +36,7 @@ order: 6
             fetch("{{ site.url }}/{{ site.baseurl }}/_data/recipes.json")
               .then(response => response.json())
               .then(data => {
-                var printable = data;
+                printable = data;
                 console.log(printable);
               })
               .catch(error => console.error('Error fetching recipes:', error));
