@@ -30,9 +30,17 @@ order: 6
             tags = {{ recipe_tags | jsonify }};
             var recipes = [];
             var results = [];
+            var printable = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
-            for (i = 0; i < tags.length; i++) {
+            fetch("{{ site.url }}/{{ site.baseurl }}/_data/recipes.json")
+              .then(response => response.json())
+              .then(data => {
+                var printable = data;
+                console.log(printable);
+              })
+              .catch(error => console.error('Error fetching recipes:', error));
+              for (i = 0; i < tags.length; i++) {
               txtValue = tags[i];
               if (txtValue.toLowerCase().indexOf(filter) > -1) {
                 results.push(txtValue);
