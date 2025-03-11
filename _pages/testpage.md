@@ -32,7 +32,7 @@ order: 6
             var printable = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
-            fetch("{{ site.url }}/{{ site.baseurl }}/_data/recipes.json")
+            fetch("{{ site.url }}{{ site.baseurl }}_data/recipes.json")
               .then(data => {
                 console.log(data);
               })
