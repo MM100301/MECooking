@@ -28,6 +28,7 @@ order: 6
             paragraph = document.getElementById('paragraph');
             filter = input.value.toLowerCase();
             tags = {{ recipe_tags | jsonify }};
+            console.log("HAHAHAHAH");
             var recipes = [];
             var results = [];
             var printable = [];
