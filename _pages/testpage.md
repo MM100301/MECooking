@@ -32,8 +32,8 @@ order: 6
             var printable = [];
             var directories = {{ site.collections | map: "directory" | jsonify }};
             var collections = {{ site.collections | map: "label" | jsonify }};
-            const response = await fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json");
-            const data = await response.json();
+            const response = fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json");
+            const data = response.json();
             console.log(data);
             for (i = 0; i < tags.length; i++) {
               txtValue = tags[i];
