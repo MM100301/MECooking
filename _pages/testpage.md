@@ -34,6 +34,7 @@ order: 6
             var collections = {{ site.collections | map: "label" | jsonify }};
             fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
               .then(data => {
+                printable = data;
                 console.log(data);
               })
               .catch(error => {
