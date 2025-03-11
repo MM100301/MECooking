@@ -34,7 +34,9 @@ order: 6
             var collections = {{ site.collections | map: "label" | jsonify }};
             fetch("{{ site.url }}/{{ site.baseurl }}/_data/recipes.json")
               .then(response => response.json())
-              .then(console.log(response))
+              .then(data => {
+                printable = data;
+              })
               .catch(error => console.error('Error fetching recipes:', error));
               for (i = 0; i < tags.length; i++) {
               txtValue = tags[i];
@@ -43,7 +45,7 @@ order: 6
               }
             }
             if (filter === "") {
-              paragraph.innerText = "nothing found";
+              paragraph.innerText = printable;
               return;
             }
             paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
