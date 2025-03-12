@@ -49,10 +49,11 @@ order: 6
                   for (j = 0; j < printable[i].tags.length; j++) {
                     txtValue = printable[i].tags[j];
                     if (results.includes(txtValue.toLowerCase())) {
-                                recipes.push(printable[i].title);
+                        recipes.push(printable[i].title);
                     }
                   }
                 }
+                paragraph.innerText = 'Recipes Found: ' + recipes.join(', ');
               })
               .catch(error => {
                 console.error(`Error fetching recipes: ${error}`);
