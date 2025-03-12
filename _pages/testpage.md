@@ -44,8 +44,15 @@ order: 6
                   }
                 }
                 if (filter === "") {
-                  paragraph.innerText = printable[0].title;
                   return;
+                }
+                for (i = 0; i < printable.length; i++) {
+                  for (j = 0; j < printable[i].tags.length; j++) {
+                    txtValue = printable[i].tags[j];
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                      recipes.push(printable[i].title);
+                    }
+                  }
                 }
                 paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
               })
