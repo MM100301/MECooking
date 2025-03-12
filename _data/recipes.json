@@ -6,10 +6,11 @@
     {% unless collection.label == "posts" %}
       {% for recipe in site[collection.label] %}
         {
-          "title"    : {{ recipe.title }},
-          "url"      : {{ recipe.url }},
-          "tags"     : {{ recipe.tags | join: ', ' }}
+          "title": "{{ recipe.title | escape }}",
+          "url": "{{ recipe.url | escape }}",
+          "tags": "{{ recipe.tags | join: ', ' | escape }}"
         }
+        {% if forloop.last and forloop.parentloop.last %}{% else %},{% endif %}
       {% endfor %}
     {% endunless %}
   {% endfor %}
