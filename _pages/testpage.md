@@ -51,7 +51,7 @@ order: 6
                       }
                     }
                   }
-                  paragraph.innerText = 'Recipes Found: ' + recipes.join(', ');
+                  paragraph.innerText = 'Recipes Found: ' + recipes.join(', ') + 'Results: ' + results.join(', ');
                 }
               })
               .catch(error => {
