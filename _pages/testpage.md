@@ -44,7 +44,7 @@ order: 6
                   }
                 }
                 if (filter === "") {
-                  paragraph.innerText = printable[0];
+                  paragraph.innerText = printable[0].title;
                   return;
                 }
                 paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
