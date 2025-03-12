@@ -46,12 +46,13 @@ order: 6
                 for (i = 0; i < printable.length; i++) {
                   for (j = 0; j < printable[i].tags.length; j++) {
                     txtValue = printable[i].tags[j];
+                    console.log(txtValue);
                     if (results.includes(txtValue.toLowerCase())) {
                         recipes.push(printable[i].title);
                     }
                   }
                 }
-                paragraph.innerText = 'Recipes Found: ' + recipes.join(', ') + 'Results: ' + results.join(', ');
+                paragraph.innerText = 'Results: ' + results.join(', ') + 'Recipes Found: ' + recipes.join(', ');
               }
             })
             .catch(error => {
