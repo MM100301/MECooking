@@ -40,3 +40,17 @@ NOT WORKING
               {% endunless %}
             {% endfor %}
           {% endfor %}
+
+
+if search isnt blank, loop through all tags to print the recipes that contain search
+if (filter != '') {
+                  for (i = 0; i < printable.length; i++) {
+                    for (j = 0; j < printable[i].tags.length; j++) {
+                      txtValue = printable[i].tags[j];
+                      if (results.includes(txtValue.toLowerCase())) {
+                          recipes.push(printable[i].title);
+                      }
+                    }
+                  }
+                  paragraph.innerText = 'Recipes Found: ' + recipes.join(', ') + 'Results: ' + results.join(', ');
+                }
