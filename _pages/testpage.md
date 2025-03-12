@@ -54,7 +54,6 @@ order: 6
                     }
                   }
                 }
-                paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
               })
               .catch(error => {
                 console.error(`Error fetching recipes: ${error}`);
