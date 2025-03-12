@@ -37,21 +37,21 @@ order: 6
               .then(data => {
                 printable = data;
                 console.log(printable[0].title);
+                for (i = 0; i < tags.length; i++) {
+                  txtValue = tags[i];
+                  if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    results.push(txtValue);
+                  }
+                }
+                if (filter === "") {
+                  paragraph.innerText = printable[0];
+                  return;
+                }
+                paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
               })
               .catch(error => {
                 console.error(`Error fetching recipes: ${error}`);
               });
-            for (i = 0; i < tags.length; i++) {
-            txtValue = tags[i];
-            if (txtValue.toLowerCase().indexOf(filter) > -1) {
-              results.push(txtValue);
-            }
-            }
-            if (filter === "") {
-              paragraph.innerText = printable[0];
-              return;
-            }
-            paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
           }
         </script>
     </div>
