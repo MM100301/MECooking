@@ -36,7 +36,6 @@ order: 6
               .then(response => response.json())
               .then(data => {
                 printable = data;
-                console.log(printable[0].title);
                 for (i = 0; i < tags.length; i++) {
                   txtValue = tags[i];
                   if (txtValue.toLowerCase().indexOf(filter) > -1) {
@@ -49,8 +48,8 @@ order: 6
                 for (i = 0; i < printable.length; i++) {
                   for (j = 0; j < printable[i].tags.length; j++) {
                     txtValue = printable[i].tags[j];
-                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                      recipes.push(printable[i].title);
+                    if (results.includes(txtValue.toLowerCase())) {
+                                recipes.push(printable[i].title);
                     }
                   }
                 }
