@@ -10,19 +10,7 @@ tags: [Beef, Steak, Couscous, Long, Emma's Choice]
     <div>
       <h4>Ingredients</h4>
       <ul>
-        <li>1 lb Salmon</li>
-        <li>2 cups of couscous</li>
-        <li>Green onion</li>
-        <li>Sesame Seeds</li>
-        <li>Honey Teriyaki Sauce</li>
-          <ul>
-            <li>Teriyaki sauce</li>
-            <li>Honey</li>
-            <li>Oil</li>
-            <li>Black Pepper</li>
-            <li>Garlic Powder</li>
-            <li>Soy Sauce</li>
-          </ul>
+        <li>1 Flank Steak</li>
       </ul>
     </div>
     <div>
