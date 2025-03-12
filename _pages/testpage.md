@@ -36,7 +36,7 @@ order: 6
               .then(response => response.json())
               .then(data => {
                 printable = data;
-                console.log(printable[0]);
+                console.log(printable[0].title);
               })
               .catch(error => {
                 console.error(`Error fetching recipes: ${error}`);
@@ -48,7 +48,7 @@ order: 6
               }
             }
             if (filter === "") {
-              paragraph.innerText = printable[0].join(', ');
+              paragraph.innerText = printable[0].title;
               return;
             }
             paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
