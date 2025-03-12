@@ -6,9 +6,9 @@
     {% unless collection.label == "posts" %}
       {% for recipe in site[collection.label] %}
         {
-          "title"    : "{{ recipe.title }}",
-          "url"      : "{{ recipe.url }}",
-          "tags"     : "{{ recipe.tags | join: ', ' }}",
+          "title"    : {{ recipe.title }},
+          "url"      : {{ recipe.url }},
+          "tags"     : {{ recipe.tags | join: ', ' }}
         }
       {% endfor %}
     {% endunless %}
