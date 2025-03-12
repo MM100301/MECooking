@@ -41,14 +41,14 @@ order: 6
               .catch(error => {
                 console.error(`Error fetching recipes: ${error}`);
               });
-              for (i = 0; i < tags.length; i++) {
-              txtValue = tags[i];
-              if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                results.push(txtValue);
-              }
+            for (i = 0; i < tags.length; i++) {
+            txtValue = tags[i];
+            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+              results.push(txtValue);
+            }
             }
             if (filter === "") {
-              paragraph.innerText = printable[0].title;
+              paragraph.innerText = printable[0];
               return;
             }
             paragraph.innerText = 'Collections: ' + collections.join(', ') + 'Directories: ' + directories.join(', ');
