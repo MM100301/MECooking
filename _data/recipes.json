@@ -8,7 +8,7 @@
         {
           "title"    : "{{ recipe.title }}",
           "url"      : "{{ recipe.url }}",
-          "tags"     : "{{ recipe.tags | join: ', ' }}"
+          "tags"     : "{{ recipe.tags | join: ', ' }}",
         }
       {% endfor %}
     {% endunless %}
