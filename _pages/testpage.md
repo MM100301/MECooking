@@ -22,13 +22,14 @@ order: 6
       <p id="paragraph"></p>
       <script>
         function recipeSearch() {
-          var input, filter, tags, i, txtValue, bruhvalue;
+          var input, filter, tags, i, txtValue;
           input = document.getElementById('searchInput');
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           tags = {{ recipe_tags | jsonify }};
           var recipes = [];
           var results = [];
+          var bruhvalue = [];
           var directories = {{ site.collections | map: "directory" | jsonify }};
           var collections = {{ site.collections | map: "label" | jsonify }};
           fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
