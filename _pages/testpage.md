@@ -29,7 +29,6 @@ order: 6
           tags = {{ recipe_tags | jsonify }};
           var recipes = [];
           var results = [];
-          var bruhvalue = [];
           var directories = {{ site.collections | map: "directory" | jsonify }};
           var collections = {{ site.collections | map: "label" | jsonify }};
           fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
@@ -44,11 +43,16 @@ order: 6
               }
               if (filter != '') {
                 for (i = 0; i < printable.length; i++) {
-                  for (j = 0; j < printable[i].tags.length; j++) {
-                    txtValue = printable[i].tags[j];
-                    if (results.includes(txtValue.toLowerCase())) {
-                      recipes.push(printable[i].title);
+                  console.log(printable[i].tags); // Log the tags to check their structure
+                  if (Array.isArray(printable[i].tags)) {
+                    for (j = 0; j < printable[i].tags.length; j++) {
+                      txtValue = printable[i].tags[j];
+                      if (results.includes(txtValue.toLowerCase())) {
+                        recipes.push(printable[i].title);
+                      }
                     }
+                  } else {
+                    console.error(`Expected an array but got: ${typeof printable[i].tags}`);
                   }
                 }
                 paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ');
