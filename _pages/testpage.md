@@ -35,7 +35,6 @@ order: 6
             .then(response => response.json())
             .then(data => {
               var printable = data;
-              var printableArray = printable.map(item => item.toString()).join(',');
               for (i = 0; i < tags.length; i++) {
                 txtValue = tags[i];
                 if (txtValue.toLowerCase().indexOf(filter) > -1) {
@@ -43,16 +42,15 @@ order: 6
                 }
               }
               if (filter != '') {
-                for (i = 0; i < printableArray.length; i++) {
-                  console.log(printableArray[i]);
-                  for (j = 0; j < printableArray[i].tags.length; j++) {
-                    txtValue = printableArray[i].tags[j];
+                for (i = 0; i < printable.length; i++) {
+                  for (j = 0; j < printable[i].tags.length; j++) {
+                    txtValue = printable[i].tags[j];
                     if (results.includes(txtValue.toLowerCase())) {
-                      recipes.push(printableArray[i].title);
+                      recipes.push(printable[i].title);
                     }
                   }
                 }
-                paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ');
+                paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ') + ' Printable garbage probably: ' + printable.join(', ');
               }     })
             .catch(error => {
               console.error(`Error fetching recipes: ${error}`);
