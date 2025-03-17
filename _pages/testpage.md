@@ -43,11 +43,11 @@ order: 6
               }
               if (filter != '') {
                 for (i = 0; i < printable.length; i++) {
-                  console.log(printable[i].tags);
                   var splitTags = printable[i].tags.split(', ');
                   console.log(splitTags);
                   for (j = 0; j < splitTags.length; j++) {
-                    if (results.includes(splitTags[j].toLowerCase())) {
+                    console.log(splitTags[j]);
+                    if (results.toLowerCase().indexOf(splitTags[j].toLowerCase()) > -1) {
                       recipes.push(printable[i].title);
                     }
                   }
