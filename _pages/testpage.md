@@ -36,7 +36,6 @@ order: 6
             .then(response => response.json())
             .then(data => {
               var printable = data;
-              var printable = JSON.parse(printable);
               for (i = 0; i < tags.length; i++) {
                 txtValue = tags[i];
                 if (txtValue.toLowerCase().indexOf(filter) > -1) {
@@ -53,7 +52,6 @@ order: 6
                     }
                   }
                 }
-                console.log(bruhvalue);
                 paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ');
               }     })
             .catch(error => {
