@@ -1,7 +1,7 @@
 ---
 title: Garlic Steak Bites
 layout: recipe
-tags: [Beef, Steak, Couscous, Long, Emma's Choice]
+tags: [Beef, Steak, Couscous, Long, Emmas Choice]
 ---
 <html>
   <body class="recipeBody">
