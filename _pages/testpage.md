@@ -43,6 +43,7 @@ order: 6
               }
               if (filter != '') {
                 for (i = 0; i < printable.length; i++) {
+                  var txtValue = txtValue + printable[i];
                   for (j = 0; j < printable[i].tags.length; j++) {
                     txtValue = printable[i].tags[j];
                     if (results.includes(txtValue.toLowerCase())) {
@@ -50,7 +51,7 @@ order: 6
                     }
                   }
                 }
-                paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ') + ' Printable garbage probably: ' + printable.join(', ');
+                paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ') + ' Textvalue garbage probably: ' + txtValue.join(', ');
               }     })
             .catch(error => {
               console.error(`Error fetching recipes: ${error}`);
