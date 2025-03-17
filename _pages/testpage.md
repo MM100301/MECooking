@@ -47,7 +47,7 @@ order: 6
                   console.log(splitTags);
                   for (j = 0; j < splitTags.length; j++) {
                     console.log(splitTags[j]);
-                    if (results.toLowerCase().indexOf(splitTags[j].toLowerCase()) > -1) {
+                    if (results.includes(splitTags[j])) {
                       recipes.push(printable[i].title);
                     }
                   }
