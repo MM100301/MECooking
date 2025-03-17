@@ -71,6 +71,7 @@ order: 6
               var printable = data;
               for (i = 0; i < titles.length; i++) {
                 txtValue = titles[i];
+                console.log(txtValue);
                 if (txtValue.toLowerCase().indexOf(filter) > -1) {
                   results.push(txtValue);
                 }
