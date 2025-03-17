@@ -43,16 +43,13 @@ order: 6
               }
               if (filter != '') {
                 for (i = 0; i < printable.length; i++) {
-                  console.log(printable[i].tags); // Log the tags to check their structure
-                  if (Array.isArray(printable[i].tags)) {
-                    for (j = 0; j < printable[i].tags.length; j++) {
-                      txtValue = printable[i].tags[j];
-                      if (results.includes(txtValue.toLowerCase())) {
-                        recipes.push(printable[i].title);
-                      }
+                  console.log(printable[i].tags);
+                  var splitTags = printable[i].tags.split(', ');
+                  console.log(splitTags);
+                  for (j = 0; j < splitTags.length; j++) {
+                    if (results.includes(splitTags[j].toLowerCase())) {
+                      recipes.push(printable[i].title);
                     }
-                  } else {
-                    console.error(`Expected an array but got: ${typeof printable[i].tags}`);
                   }
                 }
                 paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ');
