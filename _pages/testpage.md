@@ -9,7 +9,7 @@ order: 6
   <body>
     <div>
       {% assign recipe_tags = "" | split: ',' %}
-      {% assign recipe_titles = "" | split: ',' %}
+      {% assign recipe_titles %}
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
             {% for recipe in site[collection.label] %}
