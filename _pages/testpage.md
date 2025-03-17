@@ -44,7 +44,7 @@ order: 6
               }
               if (filter != '') {
                 for (i = 0; i < printable.length; i++) {
-                  bruhvalue = bruhvalue + printable[i];
+                  bruhvalue = bruhvalue + printable[i].title;
                   for (j = 0; j < printable[i].tags.length; j++) {
                     txtValue = printable[i].tags[j];
                     if (results.includes(txtValue.toLowerCase())) {

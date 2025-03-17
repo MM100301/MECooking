@@ -23,6 +23,8 @@ tags: [Beef, Steak, Couscous, Long, Emma's Choice]
     <div>
       <h4>About</h4>
       <p>This will be a short description of the dish and its importance to us/its history with us.</p>
+      <h4>Goes Well With</h4>
+      <p>Our garlic steak bites go well with the sweet soy green beans and couscous or rice.</p>
     </div>
   </body>
 </html>
