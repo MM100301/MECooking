@@ -63,14 +63,17 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           titles = {{ recipe_titles | jsonify }};
+          console.log(titles);
+          titleSort = titles.split(', ');
+          console.log(titleSort);
           var recipes = [];
           var results = [];
           fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
             .then(response => response.json())
             .then(data => {
               var printable = data;
-              for (i = 0; i < titles.length; i++) {
-                txtValue = titles[i];
+              for (i = 0; i < titleSort.length; i++) {
+                txtValue = titleSort[i];
                 console.log(txtValue);
                 if (txtValue.toLowerCase().indexOf(filter) > -1) {
                   results.push(txtValue);
