@@ -52,7 +52,8 @@ order: 6
                     }
                   }
                 }
-                paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ') + ' bruhvalue garbage certainly: ' + bruhvalue.join(', ');
+                console.log(bruhvalue);
+                paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ');
               }     })
             .catch(error => {
               console.error(`Error fetching recipes: ${error}`);
