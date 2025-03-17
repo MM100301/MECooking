@@ -35,7 +35,7 @@ order: 6
           fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
             .then(response => response.json())
             .then(data => {
-              var printable = data;
+              var printable = JSON.parse(data);
               for (i = 0; i < tags.length; i++) {
                 txtValue = tags[i];
                 if (txtValue.toLowerCase().indexOf(filter) > -1) {
