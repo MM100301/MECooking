@@ -22,7 +22,7 @@ order: 6
       <p id="paragraph"></p>
       <script>
         function recipeSearch() {
-          var input, filter, tags, i, txtValue;
+          var input, filter, tags, i, txtValue, bruhvalue;
           input = document.getElementById('searchInput');
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
@@ -43,7 +43,7 @@ order: 6
               }
               if (filter != '') {
                 for (i = 0; i < printable.length; i++) {
-                  var txtValue = txtValue + printable[i];
+                  bruhvalue = bruhvalue + printable[i];
                   for (j = 0; j < printable[i].tags.length; j++) {
                     txtValue = printable[i].tags[j];
                     if (results.includes(txtValue.toLowerCase())) {
@@ -51,7 +51,7 @@ order: 6
                     }
                   }
                 }
-                paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ') + ' Textvalue garbage probably: ' + txtValue.join(', ');
+                paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ') + ' bruhvalue garbage certainly: ' + bruhvalue.join(', ');
               }     })
             .catch(error => {
               console.error(`Error fetching recipes: ${error}`);
