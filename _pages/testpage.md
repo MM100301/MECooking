@@ -44,15 +44,13 @@ order: 6
               if (filter != '') {
                 for (i = 0; i < printable.length; i++) {
                   var splitTags = printable[i].tags.split(', ');
-                  console.log(splitTags);
                   for (j = 0; j < splitTags.length; j++) {
-                    console.log(splitTags[j]);
                     if (results.includes(splitTags[j])) {
                       recipes.push(printable[i].title);
                     }
                   }
                 }
-                paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ');
+                paragraph.innerText = 'Results: ' + results.join(', ') + '\nRecipes Found: ' + recipes.join(', ');
               }
             })
             .catch(error => {
