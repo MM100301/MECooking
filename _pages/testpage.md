@@ -35,7 +35,7 @@ order: 6
           fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
             .then(response => response.json())
             .then(data => {
-              var printable = JSON.parse(response);
+              var printable = data;
               for (i = 0; i < tags.length; i++) {
                 txtValue = tags[i];
                 if (txtValue.toLowerCase().indexOf(filter) > -1) {
@@ -46,18 +46,18 @@ order: 6
                 for (i = 0; i < printable.length; i++) {
                   for (j = 0; j < printable[i].tags.length; j++) {
                     txtValue = printable[i].tags[j];
-                    bruhvalue = bruhvalue + ' ' + txtValue;
                     if (results.includes(txtValue.toLowerCase())) {
                       recipes.push(printable[i].title);
                     }
                   }
                 }
                 paragraph.innerText = 'Results: ' + results.join(', ') + ' Recipes Found: ' + recipes.join(', ');
-              }     })
+              }
+            })
             .catch(error => {
               console.error(`Error fetching recipes: ${error}`);
             });
-        }
+          }
       </script>
     </div>
   </body>
