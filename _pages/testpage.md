@@ -7,7 +7,7 @@ order: 6
 
 <html>
   <body>
-    <>
+    <div>
       {% assign recipe_tags = "" | split: ',' %}
       {% assign recipe_titles = "" %}
       {% for collection in site.collections %}
