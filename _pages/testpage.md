@@ -30,8 +30,8 @@ order: 6
           <p id="paragraph"></p>
         </div>
         <div>
-          <h1 id="testText">testTex: Searching By Title</h1>
-          <p id="testPara">testPara: This is a test for the search bar</p>
+          <h1 id="testText">Searching By Title</h1>
+          <p id="testPara">This is a test for the search bar</p>
         </div>
       <script>
         function tagSearch() {
