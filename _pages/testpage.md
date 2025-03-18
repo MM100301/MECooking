@@ -25,7 +25,7 @@ order: 6
           <button id="titleButton" onClick="titleButtonClick()">Recipe Title Search</button>
         </div>
         <div>
-          <input type="text" id="searchInput" placeholder="Search tags">
+          <input type="text" id="searchInput" placeholder="Searching by Title">
           <button type="submit" onclick="titleSearch()" id="searchButton">Search</button>
           <p id="paragraph"></p>
         </div>
@@ -104,20 +104,24 @@ order: 6
             const tagButton = document.getElementById("tagButton");
             const titleButton = document.getElementById("titleButton");
             const searchBar = document.getElementById("searchInput");
+            const searchButton = document.getElementById("searchButton");
             const testText = document.getElementById("testText");
             tagButton.style.backgroundColor = "red";
             titleButton.style.backgroundColor = "blue";
-            searchBar.textContent = "Searching By Title";
+            searchBar.placeholder = "Searching By Title";
+            searchButton.onClick = tagSearch();
             testText.textContent = "Searching By Tag";
            }
            function titleButtonClick() {
             const tagButton = document.getElementById("tagButton");
             const titleButton = document.getElementById("titleButton");
             const searchBar = document.getElementById("searchInput");
+            const searchButton = document.getElementById("searchButton");
             const testText = document.getElementById("testText");
             titleButton.style.backgroundColor = "red";
             tagButton.style.backgroundColor = "blue";
-            searchBar.textContent = "Searching By Title";
+            searchBar.placeholder = "Searching By Title";
+            searchButton.onClick = titleSearch();
             testText.textContent = "Searching By Title";
            }
       </script>
