@@ -19,9 +19,22 @@ order: 6
         {% endunless %}
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
-      <input type="text" id="searchInput" placeholder="Search tags">
-      <button type="submit" onclick="titleSearch()" id="searchButton">Search</button>
-      <p id="paragraph"></p>
+      <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/buttons.js"></script>
+      <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/titleSearch.js"></script>
+        <div>
+          <button id="tagButton">Tag Search</button>
+          <button id="titleButton">Recipe Title Search</button>
+        </div>
+        <div>
+          <input type="text" id="searchBar">
+        </div>
+          <input type="text" id="searchInput" placeholder="Search tags">
+          <button type="submit" onclick="titleSearch()" id="searchButton">Search</button>
+          <p id="paragraph"></p>
+        <div>
+          <h1 id="testText">Searching By Title</h1>
+          <p id="testPara">This is a test for the search bar</p>
+        </div>
       <script>
         function tagSearch() {
           var input, filter, tags, txtValue;
