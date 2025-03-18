@@ -26,7 +26,7 @@ order: 6
         </div>
         <div>
           <input type="text" id="searchInput" placeholder="Searching by Title">
-          <button type="submit" id="searchButton">Search</button>
+          <button type="submit" id="searchButton" onClick="titleSearch()">Search</button>
           <p id="paragraph"></p>
         </div>
         <div>
@@ -106,8 +106,8 @@ order: 6
             const searchBar = document.getElementById("searchInput");
             const searchButton = document.getElementById("searchButton");
             const testText = document.getElementById("testText");
-            tagButton.style.backgroundColor = "red";
-            titleButton.style.backgroundColor = "blue";
+            tagButton.style.backgroundColor = "light blue";
+            titleButton.style.backgroundColor = "";
             searchBar.placeholder = "Searching By Tag";
             searchButton.onclick = tagSearch;
             testText.textContent = "Searching By Tag";
@@ -118,8 +118,8 @@ order: 6
             const searchBar = document.getElementById("searchInput");
             const searchButton = document.getElementById("searchButton");
             const testText = document.getElementById("testText");
-            titleButton.style.backgroundColor = "red";
-            tagButton.style.backgroundColor = "blue";
+            titleButton.style.backgroundColor = "light blue";
+            tagButton.style.backgroundColor = "";
             searchBar.placeholder = "Searching By Title";
             searchButton.onclick = titleSearch;
             testText.textContent = "Searching By Title";
