@@ -109,7 +109,7 @@ order: 6
             tagButton.style.backgroundColor = "red";
             titleButton.style.backgroundColor = "blue";
             searchBar.placeholder = "Searching By Tag";
-            searchButton.onClick = tagSearch();
+            searchButton.onclick = tagSearch();
             testText.textContent = "Searching By Tag";
            }
            function titleButtonClick() {
@@ -121,7 +121,7 @@ order: 6
             titleButton.style.backgroundColor = "red";
             tagButton.style.backgroundColor = "blue";
             searchBar.placeholder = "Searching By Title";
-            searchButton.onClick = titleSearch();
+            searchButton.onclick = titleSearch();
             testText.textContent = "Searching By Title";
            }
       </script>
