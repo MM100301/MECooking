@@ -26,7 +26,7 @@ order: 6
         </div>
         <div>
           <input type="text" id="searchInput" placeholder="Searching by Title">
-          <button type="submit" onclick="titleSearch()" id="searchButton">Search</button>
+          <button type="submit" id="searchButton">Search</button>
           <p id="paragraph"></p>
         </div>
         <div>
