@@ -42,6 +42,7 @@ order: 6
           tags = {{ recipe_tags | jsonify }};
           var recipes = [];
           var results = [];
+          var urls = [];
           fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
             .then(response => response.json())
             .then(data => {
