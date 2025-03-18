@@ -31,7 +31,7 @@ order: 6
         </div>
         <div>
           <h1 id="testText">Searching By Title</h1>
-          <p id="testPara">This is a test for the search bar</p>
+          <ul id="list">This is a test for the search bar</ul>
         </div>
       <script>
         function tagSearch() {
@@ -72,11 +72,13 @@ order: 6
           var input, filter, titles, txtValue;
           input = document.getElementById('searchInput');
           paragraph = document.getElementById('paragraph');
+          list = document.getElementById('list');
           filter = input.value.toLowerCase();
           titles = {{ recipe_titles | jsonify }};
           titleSort = titles.split(', ');
           var recipes = [];
           var results = [];
+          var urls = [];
           fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
             .then(response => response.json())
             .then(data => {
@@ -91,9 +93,19 @@ order: 6
                 for (i = 0; i < printable.length; i++) {
                     if (results.includes(printable[i].title)) {
                       recipes.push(printable[i].title);
+                      urls.push(printable[i].url);
                     }
                 }
                 paragraph.innerText = 'Search: ' + results.join(', ') + '\nRecipes Found: ' + recipes.join(', ');
+                list.innerHTML = '';
+                for (let i = 0; i < recipes.length; i++) {
+                  let listItem = document.createElement('li');
+                  let link = document.createElement('a');
+                  link.href = urls[i];
+                  link.textContent = recipes[i];
+                  listItem.appendChild(link);
+                  list.appendChild(listItem);
+                }
               }
             })
             .catch(error => {
