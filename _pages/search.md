@@ -58,8 +58,10 @@ order: 4
                   var splitTags = printable[i].tags.split(', ');
                   for (j = 0; j < splitTags.length; j++) {
                     if (results.includes(splitTags[j])) {
-                      recipes.push(printable[i].title);
-                      urls.push(printable[i].url);
+                      if (!recipes.includes(printable[i].title)) {
+                        recipes.push(printable[i].title);
+                        urls.push(printable[i].url);
+                      }
                     }
                   }
                 }
@@ -103,8 +105,10 @@ order: 4
               if (filter != '') {
                 for (i = 0; i < printable.length; i++) {
                     if (results.includes(printable[i].title)) {
-                      recipes.push(printable[i].title);
-                      urls.push(printable[i].url);
+                      if (!recipes.includes(printable[i].title)) {
+                        recipes.push(printable[i].title);
+                        urls.push(printable[i].url);
+                      }
                     }
                 }
                 paragraph.innerText = 'Search: ' + results.join(', ') + '\nRecipes Found: ' + recipes.join(', ');
