@@ -7,30 +7,28 @@ order: 6
 
 <html>
   <body>
-    <div>
+    <>
       {% assign recipe_tags = "" | split: ',' %}
       {% assign recipe_titles = "" %}
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
             {% for recipe in site[collection.label] %}
               {% assign recipe_tags = recipe_tags | concat:recipe.tags %}
-              {% assign recipe_titles = recipe_titles | append:recipe.title | append:', ' %}
+              {% assign recipe_titles = recipe_titles | append: ', ' | append:recipe.title %}
             {% endfor %}
         {% endunless %}
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
-      <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/buttons.js"></script>
-      <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/titleSearch.js"></script>
+      {% assign recipe_titles = recipe_titles | remove_first: ', ' %}
         <div>
           <button id="tagButton">Tag Search</button>
           <button id="titleButton">Recipe Title Search</button>
         </div>
         <div>
-          <input type="text" id="searchBar">
-        </div>
           <input type="text" id="searchInput" placeholder="Search tags">
           <button type="submit" onclick="titleSearch()" id="searchButton">Search</button>
           <p id="paragraph"></p>
+        </div>
         <div>
           <h1 id="testText">Searching By Title</h1>
           <p id="testPara">This is a test for the search bar</p>
@@ -105,6 +103,26 @@ order: 6
               console.error(`Error fetching recipes: ${error}`);
             });
           }
+          function handleTagButtonClick() {
+            const tagButton = document.getElementById("tagButton");
+            const titleButton = document.getElementById("titleButton");
+            const searchBar = document.getElementById("searchInput");
+            const testText = document.getElementById("testText");
+            tagButton.style.backgroundColor = "red";
+            titleButton.style.backgroundColor = "blue";
+            searchBar.textContent = "Searching By Title";
+            testText.textContent = "Searching By Tag";
+           }
+           function handleTitleButtonClick() {
+            const tagButton = document.getElementById("tagButton");
+            const titleButton = document.getElementById("titleButton");
+            const searchBar = document.getElementById("searchInput");
+            const testText = document.getElementById("testText");
+            titleButton.style.backgroundColor = "red";
+            tagButton.style.backgroundColor = "blue";
+            searchBar.textContent = "Searching By Title";
+            testText.textContent = "Searching By Title";
+           }
       </script>
     </div>
   </body>
