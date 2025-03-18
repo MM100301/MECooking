@@ -108,7 +108,7 @@ order: 6
             const testText = document.getElementById("testText");
             tagButton.style.backgroundColor = "red";
             titleButton.style.backgroundColor = "blue";
-            searchBar.placeholder = "Searching By Title";
+            searchBar.placeholder = "Searching By Tag";
             searchButton.onClick = tagSearch();
             testText.textContent = "Searching By Tag";
            }
