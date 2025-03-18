@@ -58,10 +58,20 @@ order: 6
                   for (j = 0; j < splitTags.length; j++) {
                     if (results.includes(splitTags[j])) {
                       recipes.push(printable[i].title);
+                      urls.push(printable[i].url);
                     }
                   }
                 }
                 paragraph.innerText = 'Results: ' + results.join(', ') + '\nRecipes Found: ' + recipes.join(', ');
+                list.innerHTML = '';
+                for (let i = 0; i < recipes.length; i++) {
+                  let listItem = document.createElement('li');
+                  let link = document.createElement('a');
+                  link.href = urls[i];
+                  link.textContent = recipes[i];
+                  listItem.appendChild(link);
+                  list.appendChild(listItem);
+                }
               }
             })
             .catch(error => {
