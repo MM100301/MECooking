@@ -106,7 +106,7 @@ order: 6
             const searchBar = document.getElementById("searchInput");
             const searchButton = document.getElementById("searchButton");
             const testText = document.getElementById("testText");
-            tagButton.style.backgroundColor = "light blue";
+            tagButton.style.backgroundColor = "lightblue";
             titleButton.style.backgroundColor = "";
             searchBar.placeholder = "Searching By Tag";
             searchButton.onclick = tagSearch;
@@ -118,7 +118,7 @@ order: 6
             const searchBar = document.getElementById("searchInput");
             const searchButton = document.getElementById("searchButton");
             const testText = document.getElementById("testText");
-            titleButton.style.backgroundColor = "light blue";
+            titleButton.style.backgroundColor = "lightblue";
             tagButton.style.backgroundColor = "";
             searchBar.placeholder = "Searching By Title";
             searchButton.onclick = titleSearch;
