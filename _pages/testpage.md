@@ -9,12 +9,12 @@ order: 6
   <body>
     <div>
       {% assign recipe_tags = "" | split: ',' %}
-      {% assign recipe_titles = "" | split ',' %}
+      {% assign recipe_titles = "" %}
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
             {% for recipe in site[collection.label] %}
               {% assign recipe_tags = recipe_tags | concat:recipe.tags %}
-              {% assign recipe_titles = recipe_titles | append:recipe.title %}
+              {% assign recipe_titles = recipe_titles | append:recipe.title | append:', ' %}
             {% endfor %}
         {% endunless %}
       {% endfor %}
