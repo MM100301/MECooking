@@ -21,8 +21,8 @@ order: 6
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
       {% assign recipe_titles = recipe_titles | remove_first: ', ' %}
         <div>
-          <button id="tagButton">Tag Search</button>
-          <button id="titleButton">Recipe Title Search</button>
+          <button id="tagButton" onClick="tagButtonClick()">Tag Search</button>
+          <button id="titleButton" onClick="titleButtonClick()">Recipe Title Search</button>
         </div>
         <div>
           <input type="text" id="searchInput" placeholder="Search tags">
@@ -30,8 +30,8 @@ order: 6
           <p id="paragraph"></p>
         </div>
         <div>
-          <h1 id="testText">Searching By Title</h1>
-          <p id="testPara">This is a test for the search bar</p>
+          <h1 id="testText">testTex: Searching By Title</h1>
+          <p id="testPara">testPara: This is a test for the search bar</p>
         </div>
       <script>
         function tagSearch() {
@@ -74,9 +74,7 @@ order: 6
           paragraph = document.getElementById('paragraph');
           filter = input.value.toLowerCase();
           titles = {{ recipe_titles | jsonify }};
-          console.log(titles);
           titleSort = titles.split(', ');
-          console.log(titleSort);
           var recipes = [];
           var results = [];
           fetch("{{ site.url }}{{ site.baseurl }}/_data/recipes.json")
@@ -85,7 +83,6 @@ order: 6
               var printable = data;
               for (i = 0; i < titleSort.length; i++) {
                 txtValue = titleSort[i];
-                console.log(txtValue);
                 if (txtValue.toLowerCase().indexOf(filter) > -1) {
                   results.push(txtValue);
                 }
@@ -103,7 +100,7 @@ order: 6
               console.error(`Error fetching recipes: ${error}`);
             });
           }
-          function handleTagButtonClick() {
+          function tagButtonClick() {
             const tagButton = document.getElementById("tagButton");
             const titleButton = document.getElementById("titleButton");
             const searchBar = document.getElementById("searchInput");
@@ -113,7 +110,7 @@ order: 6
             searchBar.textContent = "Searching By Title";
             testText.textContent = "Searching By Tag";
            }
-           function handleTitleButtonClick() {
+           function titleButtonClick() {
             const tagButton = document.getElementById("tagButton");
             const titleButton = document.getElementById("titleButton");
             const searchBar = document.getElementById("searchInput");
