@@ -135,9 +135,9 @@ order: 4
             const testText = document.getElementById("testText");
             tagButton.style.backgroundColor = "lightblue";
             titleButton.style.backgroundColor = "";
-            searchBar.placeholder = "Searching By Tag";
+            searchBar.placeholder = "Searching by Tag";
             searchButton.onclick = tagSearch;
-            testText.textContent = "Searching By Tag";
+            testText.textContent = "Searching by Tag";
            }
            function titleButtonClick() {
             const tagButton = document.getElementById("tagButton");
@@ -147,9 +147,9 @@ order: 4
             const testText = document.getElementById("testText");
             titleButton.style.backgroundColor = "lightblue";
             tagButton.style.backgroundColor = "";
-            searchBar.placeholder = "Searching By Title";
+            searchBar.placeholder = "Searching by Title";
             searchButton.onclick = titleSearch;
-            testText.textContent = "Searching By Title";
+            testText.textContent = "Searching by Title";
            }
       </script>
     </div>
