@@ -6,6 +6,8 @@ header {
 	background-color: #3498db;
 	text-align: center;
 	vertical-align: middle;
+	position: relative;
+	position: fixed;
 	top: 0;
 	overflow: hidden;
 	@include transition(all .5s ease);
