@@ -1,0 +1,75 @@
+header {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 180px;
+	background-color: #3498db;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	position: fixed;
+	top: 0;
+	overflow: hidden;
+	@include transition(all .5s ease);
+	h1 {
+		font-size: 42px;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 100;
+		@include transition(all .3s ease);
+	}
+	nav {
+		position: absolute;
+		bottom: 0;
+		height: 60px;
+		line-height: 60px;
+		width: 100%;
+		background-color: rgba(0,0,0,.1);
+		a {
+			color: #fff;
+			font-size: 18px;
+			display: inline-block;
+			padding: 10px 15px;
+			line-height: 1;
+			text-decoration: none;
+			@include border-radius(2px);
+		}
+		a:hover {
+			color: #000;
+			@include border-radius(2px);
+			@include box-shadow(0 0 0 1px #fff);
+		}
+	}
+}
+
+body {
+  background-color: #ecf0f1;
+	padding-top: 200px;
+	@include transition(padding-top .5s ease)
+}
+
+body.sticky{
+	padding-top: 100px;
+	header{
+		height: 60px;
+		background-color: rgba(52,152,219,.9);
+		h1{
+			font-size: 0px;
+			@include scale(0);
+		}
+	}
+}
+
+.recipePic {
+  float: right;
+}
+
+.recipeTitle {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.aboutUs {
+  margin-right: auto;
+  margin-left: auto;
+}
