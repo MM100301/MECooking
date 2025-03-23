@@ -31,7 +31,7 @@ order: 4
           </div>
         <div>
           <h1 id="testText">Searching By Title</h1>
-          <ul id="list">This is a test for the search bar</ul>
+          <ul id="list"></ul>
         </div>
       <script>
         function tagSearch() {
