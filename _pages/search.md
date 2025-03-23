@@ -25,7 +25,7 @@ order: 4
           <button id="titleButton" onClick="titleButtonClick()">Recipe Title Search</button>
         </div>
         <div>
-          <input type="text" id="searchInput" oninput="tagSearch" placeholder="Searching by Title">
+          <input type="text" id="searchInput" placeholder="Searching by Title" oninput="titleSearch()">
           <button type="submit" id="searchButton" onClick="titleSearch()">Search</button>
           <p id="paragraph"></p>
           </div>
