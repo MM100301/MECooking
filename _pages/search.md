@@ -25,10 +25,10 @@ order: 4
           <button id="titleButton" onClick="titleButtonClick()">Recipe Title Search</button>
         </div>
         <div>
-          <input type="text" id="searchInput" placeholder="Searching by Title">
+          <input type="text" id="searchInput" oninput="tagSearch()" placeholder="Searching by Title">
           <button type="submit" id="searchButton" onClick="titleSearch()">Search</button>
           <p id="paragraph"></p>
-        </div>
+          </div>
         <div>
           <h1 id="testText">Searching By Title</h1>
           <ul id="list">This is a test for the search bar</ul>
@@ -65,7 +65,6 @@ order: 4
                     }
                   }
                 }
-                paragraph.innerText = 'Results: ' + results.join(', ') + '\nRecipes Found: ' + recipes.join(', ');
                 list.innerHTML = '';
                 for (let i = 0; i < recipes.length; i++) {
                   let listItem = document.createElement('li');
@@ -76,6 +75,9 @@ order: 4
                   list.appendChild(listItem);
                 }
               }
+              else (
+                paragraph.innerText = 'No Recipes Found!';
+              )
             })
             .catch(error => {
               console.error(`Error fetching recipes: ${error}`);
@@ -136,6 +138,7 @@ order: 4
             tagButton.style.backgroundColor = "lightblue";
             titleButton.style.backgroundColor = "";
             searchBar.placeholder = "Searching by Tag";
+            searchBar.oninput = tagSearch;
             searchButton.onclick = tagSearch;
             testText.textContent = "Searching by Tag";
            }
@@ -148,6 +151,7 @@ order: 4
             titleButton.style.backgroundColor = "lightblue";
             tagButton.style.backgroundColor = "";
             searchBar.placeholder = "Searching by Title";
+            searchBar.oninput = titleSearch;
             searchButton.onclick = titleSearch;
             testText.textContent = "Searching by Title";
            }
