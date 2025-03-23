@@ -75,9 +75,9 @@ order: 4
                   list.appendChild(listItem);
                 }
               }
-              else (
+              else {
                 paragraph.innerText = 'No Recipes Found!';
-              )
+              }
             })
             .catch(error => {
               console.error(`Error fetching recipes: ${error}`);
@@ -124,9 +124,9 @@ order: 4
                   list.appendChild(listItem);
                 }
               }
-              else (
+              else {
                 paragraph.innerText = 'No Recipes Found!';
-              )
+              }
             })
             .catch(error => {
               console.error(`Error fetching recipes: ${error}`);
