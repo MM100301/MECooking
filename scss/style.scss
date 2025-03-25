@@ -25,9 +25,9 @@ header {
 		background-color: rgba(0,0,0,.1);
 		a {
 			color: #fff;
-			font-size: 25px;
+			font-size: clamp(16px, 2vw, 25px);
 			display: inline-block;
-			padding: 20px 40px;
+			padding: 18px 40px;
 			line-height: 1;
 			text-decoration: none;
 			@include border-radius(2px);
