@@ -29,8 +29,14 @@ tags: Seafood Salmon Couscous Sweet
       <h4>Recipe</h4>
       <p>This will be a step by step of the recipe.</p>
     </div>
+    <script>
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      var x = document.getElementById("paragraph");
+      x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+    </script>
     <div>
-      <p>Other important elements in this area could be: Cooktime, preptime, servings, inspiration</p>
+      <p id="paragraph">Other important elements in this area could be: Cooktime, preptime, servings, inspiration</p>
     </div>
     <div>
       <h4>About</h4>
