@@ -28,7 +28,7 @@ header {
 			color: #fff;
 			font-size: 18px;
 			display: inline-block;
-			padding: 21px 30px;
+			padding: 21px 20px;
 			line-height: 1;
 			text-decoration: none;
 			@include border-radius(2px);
@@ -43,7 +43,7 @@ header {
 	@media (max-width: 1000px) {
 		h1 {
 			color: #b00b1e;
-			font-size: 20px;
+			font-size: 40px;
 			padding-top: 2px;
 		}
 		nav a {
