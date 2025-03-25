@@ -8,6 +8,7 @@ tags: Seafood Salmon Couscous Sweet
     <h1 text-align="center">Teriyaki Salmon</h1>
     <img class="recipePic" src="{{ site.url }}/{{ site.baseurl }}/assets/img/TeriyakiSalmon.jpeg" alt="TeriyakiSalmon">
     <div>
+    <p id="paragraph">ee</p>
       <h4>Ingredients</h4>
       <ul>
         <li>1 lb Salmon</li>
@@ -36,7 +37,7 @@ tags: Seafood Salmon Couscous Sweet
       x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
     </script>
     <div>
-      <p id="paragraph">Other important elements in this area could be: Cooktime, preptime, servings, inspiration</p>
+      <p>Other important elements in this area could be: Cooktime, preptime, servings, inspiration</p>
     </div>
     <div>
       <h4>About</h4>
