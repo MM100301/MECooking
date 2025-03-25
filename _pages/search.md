@@ -78,6 +78,7 @@ order: 4
               }
               else {
                 paragraph.innerText = 'No Recipes Found!';
+                list.innerHTML = '';
               }
             })
             .catch(error => {
@@ -127,6 +128,7 @@ order: 4
               }
               else {
                 paragraph.innerText = 'No Recipes Found!';
+                list.innerHTML = '';
               }
             })
             .catch(error => {
