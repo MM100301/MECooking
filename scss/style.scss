@@ -10,7 +10,7 @@ header {
 	overflow: hidden;
 	@include transition(all .5s ease);
 	h1 {
-		font-size: 50vw;
+		font-size: 10vw;
 		padding-top: 2px;
 		color: #fff;
 		text-transform: uppercase;
@@ -42,7 +42,7 @@ header {
 
 	@media (max-width: 1000px) {
 		h1 {
-			font-size: 50vw;
+			font-size: 10vw;
 			padding-top: 2px;
 		}
 		nav a {
