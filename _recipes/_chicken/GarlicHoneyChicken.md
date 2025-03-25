@@ -2,11 +2,12 @@
 title: Garlic Honey Chicken
 layout: recipe
 tags: Chicken Spicy Rice
+image: https://mm100301.github.io//MECooking/assets/img/GarlicHoneyChicken.jpeg
 ---
 <html>
   <body>
     <h1 class="recipeTitle">Garlic Honey Chicken</h1>
-    <img class="recipePic" src="{{ site.url }}/{{ site.baseurl }}/assets/img/GarlicHoneyChicken.jpeg" alt="GarlicHoneyChicken">
+    <img class="recipePic" src="{{ page.image }}" alt="GarlicHoneyChicken">
     <div>
       <h4>Ingredients</h4>
       <ul>

@@ -2,11 +2,12 @@
 title: Garlic Steak Bites
 layout: recipe
 tags: [Beef, Steak, Couscous, Long, Emmas Choice]
+image: https://mm100301.github.io//MECooking/assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg
 ---
 <html>
   <body class="recipeBody">
     <h1 text-align="center">Garlic Steak Bites</h1>
-    <img class="recipePic" src="{{ site.url }}/{{ site.baseurl }}/assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg" alt="GarlicSteakBites">
+    <img class="recipePic" src="{{ page.image }}" alt="GarlicSteakBites">
     <div>
       <h4>Ingredients</h4>
       <ul>

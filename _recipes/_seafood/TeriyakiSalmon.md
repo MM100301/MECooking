@@ -2,11 +2,12 @@
 title: Teriyaki Salmon
 layout: recipe
 tags: Seafood Salmon Couscous Sweet
+image: https://mm100301.github.io//MECooking/assets/img/TeriyakiSalmon.jpeg
 ---
 <html>
   <body class="recipeBody">
     <h1 text-align="center">Teriyaki Salmon</h1>
-    <img class="recipePic" src="{{ site.url }}/{{ site.baseurl }}/assets/img/TeriyakiSalmon.jpeg" alt="TeriyakiSalmon">
+    <img class="recipePic" src="{{ page.image }}" alt="TeriyakiSalmon">
     <div>
     <p id="paragraph">leave this for now</p>
       <h4>Ingredients</h4>
