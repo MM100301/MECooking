@@ -11,7 +11,6 @@ header {
 	@include transition(all .5s ease);
 	h1 {
 		font-size: 42px;
-		padding-top: 30px;
 		color: #fff;
 		text-transform: uppercase;
 		font-weight: 100;
@@ -28,7 +27,7 @@ header {
 			color: #fff;
 			font-size: 18px;
 			display: inline-block;
-			padding: 20px 30px;
+			padding: 21px 30px;
 			line-height: 1;
 			text-decoration: none;
 			@include border-radius(2px);
@@ -40,13 +39,12 @@ header {
 		}
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		h1 {
-			font-size: 48px;
-			padding-top: 2px;
+			font-size: 42px;
 		}
 		nav a {
-			font-size: 22px;
+			font-size: 20px;
 			padding: 18px 20px;
 		}
 	}
