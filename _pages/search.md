@@ -27,10 +27,10 @@ order: 4
         <div>
           <input type="text" id="searchInput" placeholder="Searching by Title" oninput="titleSearch()">
           <button type="submit" id="searchButton" onClick="titleSearch()">Search</button>
-          <p id="paragraph"></p>
           </div>
         <div>
           <h1 id="testText">Searching By Title</h1>
+          <p id="paragraph"></p>
           <ul id="list"></ul>
         </div>
       <script>
@@ -65,6 +65,7 @@ order: 4
                     }
                   }
                 }
+                paragraph.innerText = '';
                 list.innerHTML = '';
                 for (let i = 0; i < recipes.length; i++) {
                   let listItem = document.createElement('li');
@@ -113,7 +114,7 @@ order: 4
                       }
                     }
                 }
-                paragraph.innerText = 'Search: ' + results.join(', ') + '\nRecipes Found: ' + recipes.join(', ');
+                paragraph.innerText = '';
                 list.innerHTML = '';
                 for (let i = 0; i < recipes.length; i++) {
                   let listItem = document.createElement('li');
