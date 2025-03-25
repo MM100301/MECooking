@@ -3,7 +3,7 @@ title: About
 permalink: /about/
 layout: about
 order: 2
-image: https:/mm100301.github.io/MECooking/assets/img/Us.jpeg
+image: https://mm100301.github.io//MECooking/assets/img/Us.jpeg
 ---
 <html>
     <body>
