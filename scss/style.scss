@@ -10,8 +10,8 @@ header {
 	overflow: hidden;
 	@include transition(all .5s ease);
 	h1 {
-		font-size: 3vw;
-		padding: 2px 20px;
+		font-size: 42px;
+		padding: 2px;
 		color: #fff;
 		text-transform: uppercase;
 		font-weight: 100;
@@ -37,6 +37,20 @@ header {
 			color: #000;
 			@include border-radius(2px);
 			@include box-shadow(0 0 0 1px #fff);
+		}
+	}
+
+	@media (max-width: 1000px) {
+		header {
+			background-color: #0c00c0;
+		}
+		h1 {
+			font-size: 20px;
+			padding-top: 2px;
+		}
+		nav a {
+			font-size: 20px;
+			padding: 18px 20px;
 		}
 	}
 }

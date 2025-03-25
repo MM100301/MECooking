@@ -8,7 +8,7 @@ tags: Seafood Salmon Couscous Sweet
     <h1 text-align="center">Teriyaki Salmon</h1>
     <img class="recipePic" src="{{ site.url }}/{{ site.baseurl }}/assets/img/TeriyakiSalmon.jpeg" alt="TeriyakiSalmon">
     <div>
-    <p id="paragraph">ee</p>
+    <p id="paragraph">leave this for now</p>
       <h4>Ingredients</h4>
       <ul>
         <li>1 lb Salmon</li>
