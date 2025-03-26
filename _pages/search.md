@@ -21,12 +21,12 @@ order: 4
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
       {% assign recipe_titles = recipe_titles | remove_first: ', ' %}
         <div>
-          <button id="tagButton" onClick="tagButtonClick()">Tag Search</button>
+          <button id="tagButton" class="phone" onClick="tagButtonClick()">Tag Search</button>
           <button id="titleButton" onClick="titleButtonClick()">Recipe Title Search</button>
         </div>
         <div>
-          <input type="text" id="searchInput" placeholder="Searching by Title" oninput="titleSearch()">
-          <button type="submit" id="searchButton" onClick="titleSearch()">Search</button>
+          <input type="text" id="searchInput" class="phone" placeholder="Searching by Title" oninput="titleSearch()">
+          <button type="submit" id="searchButton" class="phone" onClick="titleSearch()">Search</button>
           </div>
         <div>
           <h1 id="testText">Searching By Title</h1>
