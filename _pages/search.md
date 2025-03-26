@@ -22,7 +22,7 @@ order: 4
       {% assign recipe_titles = recipe_titles | remove_first: ', ' %}
         <div>
           <button id="tagButton" class="phone" onClick="tagButtonClick()">Tag Search</button>
-          <button id="titleButton" onClick="titleButtonClick()">Recipe Title Search</button>
+          <button id="titleButton" class="phone" onClick="titleButtonClick()">Recipe Title Search</button>
         </div>
         <div>
           <input type="text" id="searchInput" class="phone" placeholder="Searching by Title" oninput="titleSearch()">
