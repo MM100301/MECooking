@@ -39,20 +39,20 @@ header {
 			@include box-shadow(0 0 0 1px #fff);
 		}
 	}
+}
 
-	@media (max-width: 1000px) {
-		h1 {
-			font-size: 45px;
-			padding-top: 2px;
-		}
-		nav a {
-			font-size: 28px;
-			padding: 16px 18px;
-		}
-		.phone {
-			font-size: 50px;
-			background-color: #b00b1e;
-		}
+@media (max-width: 1000px) {
+	h1 {
+		font-size: 45px;
+		padding-top: 2px;
+	}
+	nav a {
+		font-size: 28px;
+		padding: 16px 18px;
+	}
+	.phone {
+		font-size: 50px;
+		background-color: #b00b1e;
 	}
 }
 
