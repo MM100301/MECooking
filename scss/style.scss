@@ -43,14 +43,14 @@ header {
 
 @media (max-width: 1000px) {
 	header {
-		height: 200px;
+		height: 140px;
 		h1 {
 			font-size: 45px;
 			padding-top: 2px;
 		}
 		nav {
-			height: 100px;
-			line-height: 100px;
+			height: 80px;
+			line-height: 80px;
 			a {
 				font-size: 28px;
 				padding: 22px 18px;
@@ -61,12 +61,12 @@ header {
 		font-size: 24px;
 	}
 	body {
-		padding-top: 200px;
+		padding-top: 140px;
 	}
 	body.sticky {
-		padding-top: 180px;
+		padding-top: 120px;
 		header{
-			height: 120px;
+			height: 80px;
 		}
 	}
 	.phone {
