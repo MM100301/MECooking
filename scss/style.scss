@@ -39,6 +39,20 @@ header {
 			@include box-shadow(0 0 0 1px #fff);
 		}
 	}
+	@media (max-width: 1000px) {
+		h1 {
+			font-size: 45px;
+			padding-top: 2px;
+		}
+		nav {
+			height: 120px;
+			line-height: 120px;
+			a {
+				font-size: 28px;
+				padding: 16px 18px;
+			}
+		}
+	}
 }
 
 @media (max-width: 1000px) {
@@ -47,18 +61,6 @@ header {
 	}
 	p {
 		font-size: 24px;
-	}
-	h1 {
-		font-size: 45px;
-		padding-top: 2px;
-	}
-	nav {
-		height: 120px;
-		line-height: 120px;
-		a {
-			font-size: 28px;
-			padding: 16px 18px;
-		}
 	}
 	body {
 		padding-top: 300px;
