@@ -63,11 +63,10 @@ header {
 	body {
 		padding-top: 220px;
 	}
-	.sticky {
-		padding-top: 400px;
+	body.sticky {
+		padding-top: 160px;
 		header{
-			height: 180px;
-			background-color: #b00b1e;
+			height: 100px;
 		}
 	}
 	.phone {
@@ -75,24 +74,25 @@ header {
 	}
 }
 
-body {
-  background-color: #ecf0f1;
-	padding-top: 200px;
-	@include transition(padding-top .5s ease)
-}
+@media (min-width: 1001px) {
+	body {
+	  background-color: #ecf0f1;
+		padding-top: 200px;
+		@include transition(padding-top .5s ease)
+	}
 
-body.sticky{
-	padding-top: 100px;
-	header{
-		height: 60px;
-		background-color: rgba(52,152,219,.9);
-		h1{
-			font-size: 0px;
-			@include scale(0);
+	body.sticky{
+		padding-top: 100px;
+		header{
+			height: 60px;
+			background-color: rgba(52,152,219,.9);
+			h1{
+				font-size: 0px;
+				@include scale(0);
+			}
 		}
 	}
 }
-
 .recipePic {
   float: right;
 }
