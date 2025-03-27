@@ -61,12 +61,17 @@ header {
 		font-size: 28px;
 	}
 	body {
+		background-color: #ecf0f1;
 		padding-top: 220px;
 	}
 	body.sticky {
 		padding-top: 160px;
 		header{
 			height: 100px;
+			background-color: rgba(52, 152, 219, .9);
+			h1 {
+				font-size: 0px;
+			}
 		}
 	}
 	.phone {
@@ -80,7 +85,6 @@ header {
 		padding-top: 200px;
 		@include transition(padding-top .5s ease)
 	}
-
 	body.sticky{
 		padding-top: 100px;
 		header{
