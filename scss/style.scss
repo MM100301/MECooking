@@ -11,7 +11,6 @@ header {
 	@include transition(all .5s ease);
 	h1 {
 		font-size: 45px;
-		padding: 2px;
 		color: #fff;
 		text-transform: uppercase;
 		font-weight: 100;
@@ -46,7 +45,6 @@ header {
 		height: 200px;
 		h1 {
 			font-size: 58px;
-			padding-top: 0px;
 		}
 		nav {
 			height: 80px;
