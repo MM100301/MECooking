@@ -14,7 +14,7 @@ header {
 		color: #fff;
 		text-transform: uppercase;
 		font-weight: 100;
-		transition: all .3s ease;
+		transition: all .5s ease;
 	}
 	nav {
 		position: absolute;
@@ -30,12 +30,12 @@ header {
 			padding: 21px 20px;
 			line-height: 1;
 			text-decoration: none;
-			@include border-radius(2px);
+			border-radius: 2px;
 		}
 		a:hover {
 			color: #000;
-			@include border-radius(2px);
-			@include box-shadow(0 0 0 1px #fff);
+			border-radius: 2px;
+			box-shadow: rgba(0 0 0 1px);
 		}
 	}
 }
@@ -65,6 +65,7 @@ header {
 	}
 	body.sticky {
 		padding-top: 140px;
+		transition: padding-top .5s ease;
 		header{
 			height: 80px;
 			background-color: rgba(52, 152, 219, .9);
@@ -80,9 +81,8 @@ header {
 
 @media (min-width: 1001px) {
 	body {
-	  background-color: #ecf0f1;
 		padding-top: 200px;
-		@include transition(padding-top .5s ease)
+		transition: padding-top .5s ease;
 	}
 	body.sticky{
 		padding-top: 100px;
@@ -91,7 +91,6 @@ header {
 			background-color: rgba(52,152,219,.9);
 			h1{
 				font-size: 0px;
-				@include scale(0);
 			}
 		}
 	}
