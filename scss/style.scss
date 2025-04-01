@@ -5,8 +5,9 @@ header {
 	background-color: #3498db;
 	position: fixed;
 	display: flex;
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 30px;
 	top: 0;
 	overflow: hidden;
 	transition: all .5s ease;
