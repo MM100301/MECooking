@@ -92,8 +92,6 @@ header {
 	body {
 		padding-top: 200px;
 		transition: padding-top .5s ease;
-		background-color: #eaeaea;
-		color: #4f6d7a;
 	}
 	body.sticky{
 		padding-top: 100px;
@@ -119,4 +117,9 @@ header {
 .aboutUs {
   margin-right: auto;
   margin-left: auto;
+}
+
+.color {
+	background-color: #eaeaea;
+	color: #4f6d7a;
 }
