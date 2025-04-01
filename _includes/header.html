@@ -1,22 +1,20 @@
 <html>
-    <body>
-        <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/header.js"></script>
-        <link rel="stylesheet" href="{{ site.url }}/{{ site.baseurl }}/scss/style.scss">
-        <header>
-            {%- assign default_paths = site.pages | map: "path" -%}
-            {%- assign page_paths = site.header_pages | default: default_paths -%}
-            {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-            <h1>{{ site.title }}</h1>
-            <nav>
-                {%- assign ordered_pages = site.pages | sort: "order" -%}
-                {%- for page in ordered_pages -%}
-                {%- if page.path contains "_pages/" -%}
-                {%- if page.title -%}
-                <a class="navLink" href="{{ page.url | relative_url }}">  {{ page.title | escape }}   </a>
-                {%- endif -%}
-                {%- endif -%}
-                {%- endfor -%}
-            </nav>
-        </header>
-    </body>
+  <script src="{{ site.url }}/{{ site.baseurl }}/assets/js/header.js"></script>
+    <link rel="stylesheet" href="{{ site.url }}/{{ site.baseurl }}/scss/style.scss">
+    <header>
+        {%- assign default_paths = site.pages | map: "path" -%}
+        {%- assign page_paths = site.header_pages | default: default_paths -%}
+        {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+        <h1>{{ site.title }}</h1>
+        <nav>
+            {%- assign ordered_pages = site.pages | sort: "order" -%}
+            {%- for page in ordered_pages -%}
+            {%- if page.path contains "_pages/" -%}
+            {%- if page.title -%}
+            <a class="navLink" href="{{ page.url | relative_url }}">  {{ page.title | escape }}   </a>
+            {%- endif -%}
+            {%- endif -%}
+            {%- endfor -%}
+        </nav>
+    </header>
 </html>
