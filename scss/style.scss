@@ -4,13 +4,14 @@ header {
 	height: 180px;
 	background-color: #3498db;
 	position: fixed;
-	text-align: center;
+	display: flex;
+  justify-content: center;
+  align-items: center;
 	top: 0;
 	overflow: hidden;
 	transition: all .5s ease;
 	h1 {
 		font-size: 45px;
-		position: absolute;
 		color: #fff;
 		text-transform: uppercase;
 		font-weight: 100;
