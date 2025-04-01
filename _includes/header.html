@@ -5,7 +5,7 @@
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
         {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-        <h1 top="0px">{{ site.title }}</h1>
+        <h1 margin-top="0px">{{ site.title }}</h1>
         <nav>
             {%- assign ordered_pages = site.pages | sort: "order" -%}
             {%- for page in ordered_pages -%}
