@@ -47,11 +47,6 @@ header {
 // Beige: #e8dab2 rgb(232, 218, 178)
 // Orange: #dd6e42 rgb(221, 110, 66)
 
-body {
-	background-color: #eaeaea;
-	text-color: #4f6d7a;
-}
-
 @media (max-width: 1000px) {
 	header {
 		height: 200px;
@@ -74,6 +69,8 @@ body {
 	body {
 		transition: padding-top .5s ease;
 		padding-top: 220px;
+		background-color: #eaeaea;
+		text-color: #4f6d7a;
 	}
 	body.sticky {
 		padding-top: 120px;
@@ -95,6 +92,8 @@ body {
 	body {
 		padding-top: 200px;
 		transition: padding-top .5s ease;
+		background-color: #eaeaea;
+		color: #4f6d7a;
 	}
 	body.sticky{
 		padding-top: 100px;
