@@ -60,12 +60,12 @@ header {
 	}
 	body {
 		background-color: #ecf0f1;
-		transition: padding-top 1.5s ease;
+		transition: padding-top .5s ease;
 		padding-top: 220px;
 	}
 	body.sticky {
 		padding-top: 140px;
-		transition: padding-top 1.5s ease;
+		transition: padding-top .5s ease;
 		header{
 			height: 80px;
 			background-color: rgba(52, 152, 219, .9);
@@ -82,11 +82,11 @@ header {
 @media (min-width: 1001px) {
 	body {
 		padding-top: 200px;
-		transition: padding-top 1.5s ease;
+		transition: padding-top .5s ease;
 	}
 	body.sticky{
 		padding-top: 100px;
-		transition: padding-top 1.5s ease;
+		transition: padding-top .5s ease;
 		header{
 			height: 60px;
 			background-color: rgba(52,152,219,.9);
