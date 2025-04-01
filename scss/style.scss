@@ -60,6 +60,7 @@ header {
 	}
 	body {
 		background-color: #ecf0f1;
+		transition: padding-top .5s ease;
 		padding-top: 220px;
 	}
 	body.sticky {
@@ -85,6 +86,7 @@ header {
 	}
 	body.sticky{
 		padding-top: 100px;
+		transition: padding-top .5s ease;
 		header{
 			height: 60px;
 			background-color: rgba(52,152,219,.9);
