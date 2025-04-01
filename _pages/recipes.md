@@ -1,7 +1,7 @@
 ---
 title: Recipes
 permalink: /recipes/
-layout: about
+layout: recipe
 order: 3
 ---
 <html>
