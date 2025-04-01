@@ -24,7 +24,7 @@ header {
 		width: 100%;
 		background-color: rgba(0,0,0,.1);
 		a {
-			color: #fff;
+			color: #e8dab2;
 			font-size: 18px;
 			display: inline-block;
 			padding: 21px 20px;
@@ -33,9 +33,7 @@ header {
 			border-radius: 2px;
 		}
 		a:hover {
-			color: #000;
-			border-radius: 2px;
-			box-shadow: rgba(0 0 0 1px);
+			color: #dd6e42;
 		}
 	}
 }
@@ -122,5 +120,10 @@ html {
 		background-color: #eaeaea;
 		color: #4f6d7a;
 	}
-	color: #4f6d7a;
+	h1 {
+		color: #4f6d7a;
+	}
+	nav {
+		color: #4f6d7a
+	}
 }
