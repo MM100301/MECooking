@@ -126,4 +126,12 @@ html {
 	nav {
 		color: #4f6d7a
 	}
+	a:link, a:link:active  {
+		color: #4f6d7a;
+		text-decoration: none;
+	}
+	a:visited, a:visited:active {
+		color: #dd6e42;
+		text-decoration: none;
+	}
 }
