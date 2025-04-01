@@ -9,10 +9,11 @@ header {
 	h1 {
 		font-size: 45px;
 		color: #fff;
-		padding-top: -40px;
 		text-transform: uppercase;
 		font-weight: 100;
 		transition: all .5s ease;
+		position: relative;
+		top: -40px; /* Move the h1 up by 40px */
 	}
 	nav {
 		position: absolute;
