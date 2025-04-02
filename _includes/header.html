@@ -11,7 +11,7 @@
             {%- for page in ordered_pages -%}
             {%- if page.path contains "_pages/" -%}
             {%- if page.title -%}
-            <a href="{{ page.url | relative_url }}">  {{ page.title | escape }}   </a>
+            <a class="other" href="{{ page.url | relative_url }}">  {{ page.title | escape }}   </a>
             {%- endif -%}
             {%- endif -%}
             {%- endfor -%}
