@@ -2,14 +2,13 @@ header {
 	left: 0px;
 	width: 100%;
 	height: 180px;
-	background-color: #c0d6df;
+	background-color: #F18814;
 	position: fixed;
 	text-align: center;
 	top: 0;
 	transition: all .5s ease;
 	h1 {
 		font-size: 45px;
-		color: #fff;
 		text-transform: uppercase;
 		font-weight: 100;
 		transition: all .5s ease;
@@ -24,7 +23,7 @@ header {
 		width: 100%;
 		background-color: rgba(0,0,0,.1);
 		a {
-			color: #dd6e42;
+			color: #BD1E51;
 			font-size: 18px;
 			display: inline-block;
 			padding: 21px 20px;
@@ -33,7 +32,7 @@ header {
 			border-radius: 2px;
 		}
 		a:hover {
-			color: #dd6e42;
+			color: #BD1E51;
 		}
 	}
 }
@@ -66,7 +65,7 @@ header {
 		transition: padding-top .5s ease;
 		header{
 			height: 80px;
-			background-color: rgb(192, 214, 223, .9);
+			background-color: rgba(241, 136, 20, .9);
 			h1 {
 				font-size: 0px;
 			}
@@ -87,7 +86,7 @@ header {
 		transition: padding-top .5s ease;
 		header{
 			height: 60px;
-			background-color: rgb(192, 214, 223, .9);
+			background-color: rgba(241, 136, 20, .9);
 			h1{
 				font-size: 0px;
 			}
@@ -110,18 +109,18 @@ header {
 
 html {
 	body {
-		background-color: #eaeaea;
-		color: #4f6d7a;
+		background-color: #F9D1D7;
+		color: #490B3D;
 	}
 	h1 {
-		color: #4f6d7a;
+		color: #490B3D;
 	}
 	a {
-		color: #dd6e42;
+		color: #BD1E51;
 		text-decoration: none;
 	}
 	a.other {
-		color: #4f6d7a;
+		color: #490B3D;
 		text-decoration: none;
 	}
 }
