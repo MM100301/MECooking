@@ -10,12 +10,12 @@ order: 3
     <div>
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
-          <h3 class="post-meta">
+          <h3>
             Items in {{ collection.label }}
           </h3>
           <ul>
             {% for recipe in site[collection.label] %}
-              <li><a href="{{ recipe.url }}">{{ recipe.title }}</a></li>
+              <li><a href="{{ recipe.url }}" class="colorLink">{{ recipe.title }}</a></li>
             {% endfor %}
           </ul>
         {% endunless %}
