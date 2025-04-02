@@ -2,7 +2,7 @@ header {
 	left: 0px;
 	width: 100%;
 	height: 180px;
-	background-color: #F18814;
+	background-color: #F1B814;
 	position: fixed;
 	text-align: center;
 	top: 0;
@@ -65,7 +65,7 @@ header {
 		transition: padding-top .5s ease;
 		header{
 			height: 80px;
-			background-color: rgba(241, 136, 20, .9);
+			background-color: rgba(241, 184, 20, 0.9);
 			h1 {
 				font-size: 0px;
 			}
@@ -86,7 +86,7 @@ header {
 		transition: padding-top .5s ease;
 		header{
 			height: 60px;
-			background-color: rgba(241, 136, 20, .9);
+			background-color: rgba(241, 184, 20, 0.9);
 			h1{
 				font-size: 0px;
 			}
@@ -135,5 +135,5 @@ html {
 //Diff colors:
 //Dark Red 490B3D
 //Red BD1E51
-//Yellow F18814
+//Yellow F1B814
 //Pink F9D1D7
