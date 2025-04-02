@@ -15,7 +15,7 @@ order: 3
           </h3>
           <ul>
             {% for recipe in site[collection.label] %}
-              <li><a href="{{ recipe.url }}" class="colorLink">{{ recipe.title }}</a></li>
+              <li><a class="colorLink" href="{{ recipe.url }}">{{ recipe.title }}</a></li>
             {% endfor %}
           </ul>
         {% endunless %}
