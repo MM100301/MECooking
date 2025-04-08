@@ -1,9 +1,9 @@
 In no particular order do these things:
 1. Page styles
 2. Correct image sizes for both phone and pc
-3. Figure out alignment of header
+3. Figure out alignment of header (DONE)
 4. Get unbanned from formkeep/formwhatever (Google forms might work too, google it)
-5. Recipe search functionality
+5. Recipe search functionality (DONE)
 6.
 
 Other Ideas:

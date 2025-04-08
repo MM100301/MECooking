@@ -4,7 +4,6 @@ permalink: /search/
 layout: about
 order: 4
 ---
-
 <html>
   <body>
     <div>
