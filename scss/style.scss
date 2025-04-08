@@ -2,7 +2,7 @@ header {
 	left: 0px;
 	width: 100%;
 	height: 180px;
-	background-color: #F1B814;
+	background-color: #CEDDBB;
 	position: fixed;
 	text-align: center;
 	top: 0;
@@ -23,7 +23,7 @@ header {
 		width: 100%;
 		background-color: rgba(0,0,0,.1);
 		a {
-			color: #BD1E51;
+			color: #B9375E;
 			font-size: 18px;
 			display: inline-block;
 			padding: 21px 20px;
@@ -32,7 +32,7 @@ header {
 			border-radius: 2px;
 		}
 		a:hover {
-			color: #BD1E51;
+			color: #B9375E;
 		}
 	}
 }
@@ -65,7 +65,7 @@ header {
 		transition: padding-top .5s ease;
 		header{
 			height: 80px;
-			background-color: rgba(241, 184, 20, 0.9);
+			background-color: rgba(206, 221, 187, .9);
 			h1 {
 				font-size: 0px;
 			}
@@ -86,7 +86,7 @@ header {
 		transition: padding-top .5s ease;
 		header{
 			height: 60px;
-			background-color: rgba(241, 184, 20, 0.9);
+			background-color: rgba(206, 221, 187, .9);
 			h1{
 				font-size: 0px;
 			}
@@ -109,18 +109,18 @@ header {
 
 html {
 	body {
-		background-color: #F9D1D7;
-		color: #490B3D;
+		background-color: #434343;
+		color: #BE9A60;
 	}
 	h1 {
-		color: #490B3D;
+		color: #BE9A60;
 	}
 	a {
-		color: #BD1E51;
+		color: #B9375E;
 		text-decoration: none;
 	}
 	a.other {
-		color: #490B3D;
+		color: #BE9A60;
 		text-decoration: none;
 	}
 }
@@ -137,3 +137,10 @@ html {
 //Red BD1E51
 //Yellow F1B814
 //Pink F9D1D7
+
+//More Colors:
+//Red: B9375E
+//Pink: FFE0E9
+//Lime Green: CEDDBB
+//Dark Grey: 434343
+//Brown: BE9A60
