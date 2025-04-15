@@ -14,10 +14,10 @@ order: 6
             Items in {{ collection.label }}
           </h3>
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-            {% for item in collection.docs %}
+            {% for recipe in collection.docs %}
               <div style="text-align: center;">
-                <a href="{{ item.url }}"><img src="{{ item.image }}" alt="{{ item.title }}" style="width: 120px; height: 150px;"></a>
-                <h4>{{ item.title }}</h4>
+                <a href="{{ recipe.url }}"><img src="{{ recipe.image }}" alt="{{ recipe.title }}" style="width: 120px; height: 150px;"></a>
+                <a href="{{ recipe.url }}">{{ recipe.title }}</a>
               </div>
             {% endfor %}
           </div>
