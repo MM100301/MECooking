@@ -16,7 +16,7 @@ order: 6
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
             {% for item in collection.docs %}
               <div style="text-align: center;">
-                <img src="{{ item.image }}" alt="{{ item.title }}" style="width: 120px; height: 150px;" />
+                <a href="{{ item.url }}"><img src="{{ item.image }}" alt="{{ item.title }}" style="width: 120px; height: 150px;"></a>
               </div>
             {% endfor %}
           </div>
