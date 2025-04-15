@@ -22,12 +22,13 @@ collections:
 
 
 include:
+  - _beef
+  - _chicken
+  - _data
   - _pages
   - _recipes
-  - _chicken
-  - _beef
   - _seafood
-  - _data
+  - _sides
 
 
 enable_darkmode: true
