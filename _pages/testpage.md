@@ -10,10 +10,10 @@ order: 6
     <div>
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
-          <h3>
+          <h3 style="cursor: pointer;" onclick="toggleGrid('{{ collection.label }}')">
             Items in {{ collection.label }}
           </h3>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+          <div id="{{ collection.label }}-grid" style="display: none; grid-template-columns: repeat(3, 1fr); gap: 10px;">
             {% for recipe in collection.docs %}
               <div style="text-align: center;">
                 <a href="{{ recipe.url }}"><img src="{{ recipe.image }}" alt="{{ recipe.title }}" style="width: 200px; height: 250px;"></a>
@@ -21,8 +21,18 @@ order: 6
               </div>
             {% endfor %}
           </div>
-          {% endunless %}
+        {% endunless %}
       {% endfor %}
     </div>
+    <script>
+      function toggleGrid(gridId) {
+        const grid = document.getElementById(`${gridId}-grid`);
+        if (grid.style.display === "none") {
+          grid.style.display = "grid";
+        } else {
+          grid.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
