@@ -17,7 +17,7 @@ order: 6
             {% for recipe in collection.docs %}
               <div style="text-align: center;">
                 <a href="{{ recipe.url }}"><img src="{{ recipe.image }}" alt="{{ recipe.title }}" style="width: 120px; height: 150px;"></a>
-                <a href="{{ recipe.url }}">{{ recipe.title }}</a>
+                <p><a href="{{ recipe.url }}">{{ recipe.title }}</a></p>
               </div>
             {% endfor %}
           </div>
