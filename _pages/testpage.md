@@ -13,23 +13,16 @@ order: 6
           <h3>
             Items in {{ collection.label }}
           </h3>
-          <ul>
-            {% for recipe in site[collection.label] %}
-              <li><a class="colorLink" href="{{ recipe.url }}">{{ recipe.title }}</a></li>
+          <grid>
+            {% for item in collection.docs %}
+              <div>
+                <img src="{{ item.image }}" alt="{{ item.title }}" />
+                <p>{{ item.title }}</p>
+              </div>
             {% endfor %}
-          </ul>
+          </grid>
         {% endunless %}
       {% endfor %}
     </div>
   </body>
 </html>
-
-
-<h3>
-  Items in {{ collection.label }}
-</h3>
-<ul>
-  {% for recipe in site[collection.label] %}
-    <li><a class="colorLink" href="{{ recipe.url }}">{{ recipe.title }}</a></li>
-  {% endfor %}
-</ul>
