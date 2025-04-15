@@ -7,20 +7,20 @@ baseurl: /MECooking
 
 collections_dir: "_recipes"
 collections:
-  Chicken:
-    label: Chicken
+  chicken:
+    label: chicken
     output: true
     permalink: MECooking/_recipes/_chicken/:title
-  Beef:
-    label: Beef
+  beef:
+    label: beef
     output: true
     permalink: MECooking/_recipes/_beef/:title
-  Seafood:
-    label: Seafood
+  seafood:
+    label: seafood
     output: true
     permalink: MECooking/_recipes/_seafood/:title
-  Sides:
-    label: Sides
+  sides:
+    label: sides
     output: true
     permalink: MECooking/_recipes/_sides/:title
 
