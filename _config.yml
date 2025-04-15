@@ -19,6 +19,10 @@ collections:
     label: seafood
     output: true
     permalink: MECooking/_recipes/_seafood/:title
+  sides:
+    label: sides
+    output: true
+    permalink: MECooking/_recipes/_sides/:title
 
 
 include:
