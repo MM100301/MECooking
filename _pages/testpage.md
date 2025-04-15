@@ -11,7 +11,7 @@ order: 6
       {% for collection in site.collections %}
         {% unless collection.label == "posts" %}
           <h3 style="cursor: pointer;" onclick="toggleGrid('{{ collection.label }}')">
-            {{ collection.label | capitalize }}
+            {{ collection.label | capitalize }} + "⌄"
           </h3>
             <div id="{{ collection.label }}-grid" style="display: none; grid-template-columns: repeat(3, 1fr); gap: 10px;">
               {% for recipe in collection.docs %}
