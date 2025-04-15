@@ -17,6 +17,7 @@ order: 6
             {% for item in collection.docs %}
               <div style="text-align: center;">
                 <a href="{{ item.url }}"><img src="{{ item.image }}" alt="{{ item.title }}" style="width: 120px; height: 150px;"></a>
+                <h4>{{ item.title }}</h4>
               </div>
             {% endfor %}
           </div>
