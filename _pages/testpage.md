@@ -13,14 +13,14 @@ order: 6
           <h3 style="cursor: pointer;" onclick="toggleGrid('{{ collection.label }}')">
             {{ collection.label | capitalize }}
           </h3>
-          {% for recipe in collection.docs %}
             <div id="{{ collection.label }}-grid" style="display: none; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-              <div style="text-align: center;">
-              <a href="{{ recipe.url }}"><img src="{{ recipe.image }}" alt="{{ recipe.title }}" style="width: 200px; height: 250px;"></a>
-              <p><a href="{{ recipe.url }}">{{ recipe.title }}</a></p>
+              {% for recipe in collection.docs %}
+                <div style="text-align: center;">
+                <a href="{{ recipe.url }}"><img src="{{ recipe.image }}" alt="{{ recipe.title }}" style="width: 200px; height: 250px;"></a>
+                <p><a href="{{ recipe.url }}">{{ recipe.title }}</a></p>
+                </div>
+              {% endfor %}
             </div>
-          {% endfor %}
-          </div>
         {% endunless %}
       {% endfor %}
     </div>
