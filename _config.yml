@@ -8,19 +8,19 @@ baseurl: /MECooking
 collections_dir: "_recipes"
 collections:
   chicken:
-    label: chicken
+    label: Chicken
     output: true
     permalink: MECooking/_recipes/_chicken/:title
   beef:
-    label: beef
+    label: Beef
     output: true
     permalink: MECooking/_recipes/_beef/:title
   seafood:
-    label: seafood
+    label: Seafood
     output: true
     permalink: MECooking/_recipes/_seafood/:title
   sides:
-    label: sides
+    label: Sides
     output: true
     permalink: MECooking/_recipes/_sides/:title
 
