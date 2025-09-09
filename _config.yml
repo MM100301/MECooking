@@ -29,10 +29,13 @@ include:
   - _beef
   - _chicken
   - _data
+  - _other
+  - _pasta
   - _pages
   - _recipes
   - _seafood
   - _sides
+  - _test
 
 
 enable_darkmode: true

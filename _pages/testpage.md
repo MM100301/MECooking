@@ -14,7 +14,7 @@ order: 6
             {{ collection.label | capitalize }}
             <span id="{{ collection.label }}-caret" style="display: inline-block; transform: rotate(0deg); transition: transform 0.3s;">▼</span>
           </h3>
-          <div id="{{ collection.label }}-grid" style="display: none; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+          <div id="{{ collection.label }}-grid" class="imagegrid" style="display: none; grid-template-columns: repeat(3, 1fr); gap: 10px;">
             {% for recipe in collection.docs %}
               <div style="text-align: center;">
                 <a href="{{ recipe.url }}"><img src="{{ recipe.image }}" alt="{{ recipe.title }}" style="width: 200px; height: 250px;"></a>
