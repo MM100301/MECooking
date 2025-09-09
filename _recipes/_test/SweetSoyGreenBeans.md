@@ -1,12 +1,12 @@
 ---
-title: Teriyaki Salmon
+title: Sweet Soy Green Beans
 layout: recipe
-tags: [Seafood, Salmon, Couscous, Sweet, Main]
+tags: [Vegetables, Side]
 image: https://mm100301.github.io//MECooking/assets/img/TeriyakiSalmon.jpeg
 ---
 <html>
   <body class="recipeBody">
-    <h1 text-align="center">Teriyaki Salmon</h1>
+    <h1 text-align="center">Sweet Soy Green Beans</h1>
     <img class="recipePic" src="{{ page.image }}" alt="TeriyakiSalmon">
     <div>
     <p id="paragraph">leave this for now</p>
@@ -31,12 +31,6 @@ image: https://mm100301.github.io//MECooking/assets/img/TeriyakiSalmon.jpeg
       <h4>Recipe</h4>
       <p>This will be a step by step of the recipe.</p>
     </div>
-    <script>
-      var w = window.innerWidth;
-      var h = window.innerHeight;
-      var x = document.getElementById("paragraph");
-      x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
-    </script>
     <div>
       <p>Other important elements in this area could be: Cooktime, preptime, servings, inspiration</p>
     </div>

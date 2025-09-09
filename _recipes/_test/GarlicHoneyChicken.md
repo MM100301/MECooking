@@ -1,7 +1,7 @@
 ---
 title: Garlic Honey Chicken
 layout: recipe
-tags: Chicken Spicy Rice
+tags: [Chicken, Spicy, Rice, Main]
 image: https://mm100301.github.io//MECooking/assets/img/GarlicHoneyChicken.jpeg
 ---
 <html>
