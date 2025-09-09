@@ -23,12 +23,12 @@ order: 4
           <button id="titleButton" class="phone" onClick="titleButtonClick()">Recipe Title Search</button>
           <button id="tagButton" class="phone" onClick="tagButtonClick()">Tag Search</button>
         </div>
-        <div>
+        <div class="search">
           <input type="text" id="searchInput" class="phone" placeholder="Searching by Title" oninput="titleSearch()">
           <button type="submit" id="searchButton" class="phone" onClick="titleSearch()">Search</button>
           </div>
-        <div>
-          <h1 id="testText">Searching By Title</h1>
+        <div class="search">
+          <h1 id="testText"></h1>
           <p id="paragraph"></p>
           <ul id="list" class="phone"></ul>
         </div>
@@ -145,7 +145,7 @@ order: 4
             searchBar.placeholder = "Searching by Tag";
             searchBar.oninput = tagSearch;
             searchButton.onclick = tagSearch;
-            testText.textContent = "Searching by Tag";
+            testText.textContent = "Results by Tag";
            }
            function titleButtonClick() {
             const tagButton = document.getElementById("tagButton");
@@ -158,7 +158,7 @@ order: 4
             searchBar.placeholder = "Searching by Title";
             searchBar.oninput = titleSearch;
             searchButton.onclick = titleSearch;
-            testText.textContent = "Searching by Title";
+            testText.textContent = "Results by Title";
            }
       </script>
     </div>
