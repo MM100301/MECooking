@@ -15,6 +15,14 @@ collections:
     label: beef
     output: true
     permalink: MECooking/_recipes/_beef/:title
+  other:
+    label: other
+    output: true
+    permalink: MECooking/_recipes/_other/:title
+  pasta:
+    label: pasta
+    output: true
+    permalink: MECooking/_recipes/_pasta/:title
   seafood:
     label: seafood
     output: true
@@ -23,6 +31,10 @@ collections:
     label: sides
     output: true
     permalink: MECooking/_recipes/_sides/:title
+  test:
+    label: test
+    output: true
+    permalink: MECooking/_recipes/_test/:title
 
 
 include:
