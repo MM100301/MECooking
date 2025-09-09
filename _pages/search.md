@@ -19,9 +19,9 @@ order: 4
       {% endfor %}
       {% assign recipe_tags = recipe_tags | join: ',' | split: ',' | uniq %}
       {% assign recipe_titles = recipe_titles | remove_first: ', ' %}
-        <div>
-          <button id="tagButton" class="phone" onClick="tagButtonClick()">Tag Search</button>
+        <div class="search">
           <button id="titleButton" class="phone" onClick="titleButtonClick()">Recipe Title Search</button>
+          <button id="tagButton" class="phone" onClick="tagButtonClick()">Tag Search</button>
         </div>
         <div>
           <input type="text" id="searchInput" class="phone" placeholder="Searching by Title" oninput="titleSearch()">
