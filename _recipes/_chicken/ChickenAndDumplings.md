@@ -1,7 +1,7 @@
 ---
 title: Chicken and Dumplings
 layout: recipe
-tags: [Chicken, Dumplings, Main]
+tags: [Chicken, Dumplings, Main, Easy, OnePan]
 image: https://mm100301.github.io//MECooking/assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg
 ---
 <html>

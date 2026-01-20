@@ -1,7 +1,7 @@
 ---
 title: Chili's Skillet Queso
 layout: recipe
-tags: [Queso, PartyDish, ]
+tags: [Queso, PartyDish, OnePan]
 image: https://mm100301.github.io//MECooking/assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg
 ---
 <html>
