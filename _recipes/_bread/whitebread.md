@@ -7,25 +7,26 @@ image: https://mm100301.github.io//MECooking/assets/img/GarlicSteakBitesSweetSoy
 <html>
   <body class="recipeBody">
     <h1 text-align="center">White Bread</h1>
-    <img class="recipePic" src="{{ page.image }}" alt="GarlicSteakBites">
+    <img class="recipePic" src="{{ page.image }}" alt="White Bread">
     <div>
       <h4>Ingredients</h4>
       <ul>
-        <li>1 Can of Canned Bread</li>
-        <li>Bread Flour</li>
-        <li>Instant Rise Yeast</li>
-        <li>Sugar</li>
-        <li>Salt</li>
-        <li>Butter</li>
-        <li>Some other stuff</li>
+        <li>1 1/2 Cups of Milk</li>
+        <li>6 tbsps of Butter</li>
+        <li>4 Cups of Bread Flour</li>
+        <li>2 tbsps of White Granulated Sugar
+        <li>1 1/2 tsps Salt</li>
+        <li>1 1/2 tsps Instant Rise Yeast</li>
       </ul>
     </div>
     <div>
       <h4>Recipe</h4>
         <ol>
-          <li>Mix all wet ingredients; butter, </li>
-          <li></li>
-          <li></li>
+          <li>With butter and milk warmed, put into bread mixer </li>
+          <li>Place all other ingredients into bread mixer</li>
+          <li>Put bread yeast in last, avoid letting it touch salt</li>
+          <li>For 2lb loaf it should take about 3hrs 30mins</li>
+          <li>Once it is done let it sit before slicing</li>
         </ol>
     </div>
     <div>
@@ -33,9 +34,9 @@ image: https://mm100301.github.io//MECooking/assets/img/GarlicSteakBitesSweetSoy
     </div>
     <div>
       <h4>About</h4>
-      <p>This will be a short description of the dish and its importance to us/its history with us.</p>
-      <h4>Goes Well With</h4>
       <p>Can be made into toast or sandwiches. The bread maker makes slices quite large so it might be best to use one slice and fold it in half for a sandwich.</p>
+      <h4>Goes Well With</h4>
+      <p>Great for sandwiches. Goes especially well with Buffalo Barclay Chicken Salad</p>
     </div>
   </body>
 </html>

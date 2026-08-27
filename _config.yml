@@ -8,43 +8,47 @@ baseurl: /MECooking
 collections_dir: "_recipes"
 collections:
   beef:
-    label: beef
+    label: Beef
     output: true
     permalink: MECooking/_recipes/_beef/:title
   bread:
-    label: bread
+    label: Bread
     output: true
     permalink: MECooking/_recipes/_bread/:title
   chicken:
-    label: chicken
+    label: Chicken
     output: true
     permalink: MECooking/_recipes/_chicken/:title
   dessert:
-    label: dessert
+    label: Dessert
     output: true
     permalink: MECooking/_recipes/_dessert/:title
+  dips&sauces:
+    label: Dips & Sauces
+    output: true
+    permalink: MECooking/_recipes/_dips&sauces/:title
   other:
-    label: other
+    label: Other
     output: true
     permalink: MECooking/_recipes/_other/:title
   party dishes:
-    label: party dishes
+    label: Party Dishes
     output: true
     permalink: MECooking/_recipes/_party_dishes/:title
   pasta:
-    label: pasta
+    label: Pasta
     output: true
     permalink: MECooking/_recipes/_pasta/:title
   seafood:
-    label: seafood
+    label: Seafood
     output: true
     permalink: MECooking/_recipes/_seafood/:title
   sides:
-    label: sides
+    label: Sides
     output: true
     permalink: MECooking/_recipes/_sides/:title
   test:
-    label: test
+    label: Test
     output: true
     permalink: MECooking/_recipes/_test/:title
 
@@ -55,6 +59,7 @@ include:
   - _chicken
   - _data
   - _dessert
+  - _dips&sauces
   - _other
   - _party_dishes
   - _pasta

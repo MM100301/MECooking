@@ -1,22 +1,22 @@
 ---
-title: Chicken and Dumplings
+title: Nothing
 layout: recipe
-tags: [Chicken, Dumplings, Main]
+tags: [Nothing]
 image: https://mm100301.github.io//MECooking/assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg
 ---
 <html>
   <body class="recipeBody">
-    <h1 text-align="center">Chicken and Dumplings</h1>
-    <img class="recipePic" src="{{ page.image }}" alt="GarlicSteakBites">
+    <h1 text-align="center">Nothing</h1>
+    <img class="recipePic" src="{{ page.image }}" alt="Nothing">
     <div>
       <h4>Ingredients</h4>
       <ul>
-        <li>1 Rotisserie Chicken</li>
-        <li>1 Can Jumbo Biscuits</li>
-        <li>Chicken Broth</li>
-        <li>Heavy Cream</li>
-        <li>1 Can Cream of Chicken Soup</li>
-        <li>Frozen Peas and Carrots</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
     </div>
     <div>
