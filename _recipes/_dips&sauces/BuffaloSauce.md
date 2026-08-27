@@ -1,7 +1,7 @@
 ---
 title: Buffalo Sauce
 layout: recipe
-tags: [Nothing]
+tags: [Buffalo, Sauce]
 image: https://mm100301.github.io//MECooking/assets/img/GarlicSteakBitesSweetSoyGreenBeans.jpeg
 ---
 <html>
